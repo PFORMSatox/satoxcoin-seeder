@@ -1,0 +1,13 @@
+[package]
+name = "dnsseed-publish"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+
+[dependencies]
+seeder-core = { path = "../../crates/seeder-core" }
+seeder-publish = { path = "../../crates/seeder-publish" }
+tokio = { version = "1", features = ["full"] }
+clap = { version = "4", features = ["derive"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }

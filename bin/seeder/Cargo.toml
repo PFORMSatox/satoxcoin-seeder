@@ -1,0 +1,15 @@
+[package]
+name = "seeder"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+
+[dependencies]
+seeder-core = { path = "../../crates/seeder-core" }
+dns-server = { path = "../../crates/dns-server" }
+tokio = { version = "1", features = ["full"] }
+clap = { version = "4", features = ["derive"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+rand = "0.8"
+postcard = { version = "1", default-features = false, features = ["use-std"] }

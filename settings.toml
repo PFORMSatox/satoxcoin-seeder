@@ -1,0 +1,31 @@
+# Satoxcoin Seeder — Configuration
+# Network parameters must match the satoxcoin core chain.
+# Empty values use safe defaults. Fill in your own seeds and Cloudflare details.
+
+protocol_version = "70028"
+init_proto_version = "209"
+min_peer_proto_version = "70025"
+caddr_time_version = ""                           		 # Set to "" or "0" if not used
+pchMessageStart_0 = "0x63"                         		 # S
+pchMessageStart_1 = "0x56"                         		 # A
+pchMessageStart_2 = "0x65"                      		 # T
+pchMessageStart_3 = "0x65"                        		 # T
+wallet_port = "60777"
+explorer_url = "https://xplore.satoverse.io/api/getblockcount"
+second_explorer_url = "https://blockbook.satoverse.io/api/v2"
+explorer_requery_seconds = "600"
+block_count = "0"
+seed_1 = ""				                         # Put your seed node node1.domain.com
+seed_2 = ""				                         # Put your seed node node2.domain.com
+seed_3 = ""
+seed_4 = ""
+seed_5 = ""
+seed_6 = ""
+seed_7 = ""
+seed_8 = ""
+seed_9 = ""
+seed_10 = ""
+cf_domain = ""		                        		 # Put domain
+cf_domain_prefix = ""                         			 # Put subdomain
+cf_api_key = ""                                  		 # Put your CloudFlare API Key
+cf_seed_dump = "dnsseed.dump"
