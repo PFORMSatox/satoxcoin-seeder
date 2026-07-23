@@ -1,0 +1,206 @@
+- generic [ref=f1e2]:
+  - generic [ref=f1e3]:
+    - link "Skip to content" [ref=f1e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner [ref=f1e6]:
+      - heading "Navigation Menu" [level=2] [ref=f1e7]
+      - generic [ref=f1e9]:
+        - button "Toggle navigation" [ref=f1e11] [cursor=pointer]
+        - link "Homepage" [ref=f1e17] [cursor=pointer]:
+          - /url: /
+        - generic [ref=f1e20]:
+          - link "Sign in" [ref=f1e21] [cursor=pointer]:
+            - /url: /login?return_to=https%3A%2F%2Fgithub.com%2FPFORMSatox%2Fsatoxcoin-seeder%2Fsettings%2Fsecurity_analysis
+          - button "Appearance settings" [ref=f1e24] [cursor=pointer]
+  - main [ref=f1e27]:
+    - img "404 “This is not the web page you are looking for”" [ref=f1e31]
+    - generic [ref=f1e32]:
+      - search [ref=f1e33]:
+        - generic [ref=f1e34]: "Find code, projects, and people on GitHub:"
+        - generic [ref=f1e35]:
+          - textbox "Find code, projects, and people on GitHub:" [ref=f1e36]
+          - button "Search" [ref=f1e37] [cursor=pointer]
+      - generic [ref=f1e38]:
+        - link "Contact Support" [ref=f1e39] [cursor=pointer]:
+          - /url: https://support.github.com?tags=dotcom-404
+        - text: —
+        - link "GitHub Status" [ref=f1e40] [cursor=pointer]:
+          - /url: https://githubstatus.com
+        - text: —
+        - link "@githubstatus" [ref=f1e41] [cursor=pointer]:
+          - /url: https://x.com/githubstatus
+  - contentinfo [ref=f1e45]:
+    - heading "Site-wide Links" [level=2] [ref=f1e46]
+    - generic [ref=f1e48]:
+      - region [ref=f1e49]:
+        - link "Go to GitHub homepage" [ref=f1e50] [cursor=pointer]:
+          - /url: /
+        - heading "The developer newsletter" [level=3] [ref=f1e53]
+        - paragraph [ref=f1e55]: Get tips, technical guides, and best practices. Twice a month. Right in your inbox.
+        - link "Subscribe" [ref=f1e56] [cursor=pointer]:
+          - /url: /newsletter
+      - generic [ref=f1e59]:
+        - navigation [ref=f1e60]:
+          - heading "Platform" [level=3] [ref=f1e61]
+          - list [ref=f1e62]:
+            - listitem [ref=f1e63]:
+              - link "Features" [ref=f1e64] [cursor=pointer]:
+                - /url: /features
+            - listitem [ref=f1e66]:
+              - link "Enterprise" [ref=f1e67] [cursor=pointer]:
+                - /url: /enterprise
+            - listitem [ref=f1e69]:
+              - link "Copilot" [ref=f1e70] [cursor=pointer]:
+                - /url: /features/copilot
+            - listitem [ref=f1e72]:
+              - link "AI" [ref=f1e73] [cursor=pointer]:
+                - /url: /features/ai
+            - listitem [ref=f1e75]:
+              - link "Security" [ref=f1e76] [cursor=pointer]:
+                - /url: /security
+            - listitem [ref=f1e78]:
+              - link "Pricing" [ref=f1e79] [cursor=pointer]:
+                - /url: /pricing
+            - listitem [ref=f1e81]:
+              - link "Team" [ref=f1e82] [cursor=pointer]:
+                - /url: /team
+            - listitem [ref=f1e84]:
+              - link "Resources" [ref=f1e85] [cursor=pointer]:
+                - /url: https://github.com/resources
+            - listitem [ref=f1e87]:
+              - link "Roadmap" [ref=f1e88] [cursor=pointer]:
+                - /url: /github/roadmap
+            - listitem [ref=f1e90]:
+              - link "Compare GitHub" [ref=f1e91] [cursor=pointer]:
+                - /url: /resources/articles/devops-tools-comparison
+        - navigation [ref=f1e93]:
+          - heading "Ecosystem" [level=3] [ref=f1e94]
+          - list [ref=f1e95]:
+            - listitem [ref=f1e96]:
+              - link "Developer API" [ref=f1e97] [cursor=pointer]:
+                - /url: https://docs.github.com/integrations/concepts/about-building-integrations
+            - listitem [ref=f1e99]:
+              - link "Partners" [ref=f1e100] [cursor=pointer]:
+                - /url: https://github.com/partners
+            - listitem [ref=f1e102]:
+              - link "Education" [ref=f1e103] [cursor=pointer]:
+                - /url: /education
+            - listitem [ref=f1e105]:
+              - link "GitHub CLI" [ref=f1e106] [cursor=pointer]:
+                - /url: https://cli.github.com
+            - listitem [ref=f1e108]:
+              - link "GitHub Desktop" [ref=f1e109] [cursor=pointer]:
+                - /url: https://github.com/apps/desktop
+            - listitem [ref=f1e111]:
+              - link "GitHub Mobile" [ref=f1e112] [cursor=pointer]:
+                - /url: /mobile
+            - listitem [ref=f1e114]:
+              - link "GitHub Marketplace" [ref=f1e115] [cursor=pointer]:
+                - /url: /marketplace
+            - listitem [ref=f1e117]:
+              - link "MCP Registry" [ref=f1e118] [cursor=pointer]:
+                - /url: /mcp
+        - navigation [ref=f1e120]:
+          - heading "Support" [level=3] [ref=f1e121]
+          - list [ref=f1e122]:
+            - listitem [ref=f1e123]:
+              - link "Docs" [ref=f1e124] [cursor=pointer]:
+                - /url: https://docs.github.com
+            - listitem [ref=f1e126]:
+              - link "Community Forum" [ref=f1e127] [cursor=pointer]:
+                - /url: https://github.community
+            - listitem [ref=f1e129]:
+              - link "Professional Services" [ref=f1e130] [cursor=pointer]:
+                - /url: https://github.com/services
+            - listitem [ref=f1e132]:
+              - link "Premium Support" [ref=f1e133] [cursor=pointer]:
+                - /url: /enterprise/premium-support
+            - listitem [ref=f1e135]:
+              - link "Skills" [ref=f1e136] [cursor=pointer]:
+                - /url: https://skills.github.com
+            - listitem [ref=f1e138]:
+              - link "Status" [ref=f1e139] [cursor=pointer]:
+                - /url: https://www.githubstatus.com
+            - listitem [ref=f1e141]:
+              - link "Contact GitHub" [ref=f1e142] [cursor=pointer]:
+                - /url: https://support.github.com?tags=dotcom-footer
+            - listitem [ref=f1e144]:
+              - link "What is Git?" [ref=f1e145] [cursor=pointer]:
+                - /url: /git-guides
+            - listitem [ref=f1e147]:
+              - link "Sitemap" [ref=f1e148] [cursor=pointer]:
+                - /url: /sitemap
+        - navigation [ref=f1e150]:
+          - heading "Company" [level=3] [ref=f1e151]
+          - list [ref=f1e152]:
+            - listitem [ref=f1e153]:
+              - link "About" [ref=f1e154] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=f1e156]:
+              - link "Why GitHub" [ref=f1e157] [cursor=pointer]:
+                - /url: /why-github
+            - listitem [ref=f1e159]:
+              - link "Customer Stories" [ref=f1e160] [cursor=pointer]:
+                - /url: /customer-stories?type=enterprise
+            - listitem [ref=f1e162]:
+              - link "Blog" [ref=f1e163] [cursor=pointer]:
+                - /url: https://github.blog
+            - listitem [ref=f1e165]:
+              - link "The ReadME Project" [ref=f1e166] [cursor=pointer]:
+                - /url: /readme
+            - listitem [ref=f1e168]:
+              - link "Careers" [ref=f1e169] [cursor=pointer]:
+                - /url: https://github.careers
+            - listitem [ref=f1e171]:
+              - link "Newsroom" [ref=f1e172] [cursor=pointer]:
+                - /url: /newsroom
+            - listitem [ref=f1e174]:
+              - link "Inclusion" [ref=f1e175] [cursor=pointer]:
+                - /url: /about/diversity
+            - listitem [ref=f1e177]:
+              - link "Social Impact" [ref=f1e178] [cursor=pointer]:
+                - /url: https://socialimpact.github.com
+            - listitem [ref=f1e180]:
+              - link "Shop" [ref=f1e181] [cursor=pointer]:
+                - /url: https://thegithubshop.com
+    - generic [ref=f1e184]:
+      - navigation "Legal and Resource Links" [ref=f1e185]:
+        - list [ref=f1e186]:
+          - listitem [ref=f1e187]:
+            - time [ref=f1e188]: © 2026 GitHub, Inc.
+          - listitem [ref=f1e189]:
+            - link "Terms" [ref=f1e190] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+          - listitem [ref=f1e191]:
+            - link "Privacy" [ref=f1e192] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement
+          - listitem [ref=f1e193]:
+            - button "Manage cookies" [ref=f1e195] [cursor=pointer]
+          - listitem [ref=f1e196]:
+            - button "Do not share my personal information" [ref=f1e198] [cursor=pointer]
+      - generic [ref=f1e199]:
+        - navigation "GitHub's Social Media Links" [ref=f1e200]:
+          - list [ref=f1e201]:
+            - listitem [ref=f1e202]:
+              - link "GitHub on LinkedIn" [ref=f1e203] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/github
+            - listitem [ref=f1e207]:
+              - link "GitHub on Instagram" [ref=f1e208] [cursor=pointer]:
+                - /url: https://www.instagram.com/github
+            - listitem [ref=f1e212]:
+              - link "GitHub on YouTube" [ref=f1e213] [cursor=pointer]:
+                - /url: https://www.youtube.com/github
+            - listitem [ref=f1e217]:
+              - link "GitHub on X" [ref=f1e218] [cursor=pointer]:
+                - /url: https://x.com/github
+            - listitem [ref=f1e222]:
+              - link "GitHub on TikTok" [ref=f1e223] [cursor=pointer]:
+                - /url: https://www.tiktok.com/@github
+            - listitem [ref=f1e227]:
+              - link "GitHub on Twitch" [ref=f1e228] [cursor=pointer]:
+                - /url: https://www.twitch.tv/github
+            - listitem [ref=f1e232]:
+              - link "GitHub’s organization on GitHub" [ref=f1e233] [cursor=pointer]:
+                - /url: https://github.com/github
+        - button "English - Select language" [ref=f1e238] [cursor=pointer]:
+          - generic [ref=f1e239]: English

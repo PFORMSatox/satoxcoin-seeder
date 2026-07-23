@@ -1,0 +1,583 @@
+- generic [active] [ref=f16e1]:
+  - generic [ref=f16e2]:
+    - generic [ref=f16e3]:
+      - link "Skip to content" [ref=f16e4] [cursor=pointer]:
+        - /url: "#start-of-content"
+      - banner "Global navigation menu" [ref=f16e8]:
+        - generic [ref=f16e9]:
+          - generic [ref=f16e10]:
+            - button "Open menu" [ref=f16e12] [cursor=pointer]
+            - link "Homepage (g then d)" [ref=f16e15] [cursor=pointer]:
+              - /url: /
+          - generic [ref=f16e18]:
+            - navigation "Breadcrumbs" [ref=f16e19]:
+              - list [ref=f16e20]:
+                - listitem [ref=f16e21]:
+                  - link "PFORMSatox" [ref=f16e22] [cursor=pointer]:
+                    - /url: /PFORMSatox
+                - listitem [ref=f16e24]:
+                  - link "satoxcoin-seeder" [ref=f16e25] [cursor=pointer]:
+                    - /url: /PFORMSatox/satoxcoin-seeder
+                  - button "Switch repository (alt shift r)" [ref=f16e26] [cursor=pointer]
+            - button "Search or jump to… (forward slash)" [ref=f16e29] [cursor=pointer]
+          - generic [ref=f16e32]:
+            - generic [ref=f16e33]:
+              - generic [ref=f16e36]:
+                - link "Chat with Copilot" [ref=f16e38] [cursor=pointer]:
+                  - /url: /copilot
+                - button "Open Copilot…" [ref=f16e43] [cursor=pointer]
+              - button "Create new..." [ref=f16e45] [cursor=pointer]
+              - generic [ref=f16e47]:
+                - link "All issues" [ref=f16e48] [cursor=pointer]:
+                  - /url: /issues
+                - link "All pull requests" [ref=f16e52] [cursor=pointer]:
+                  - /url: /pulls
+                - link "All repositories" [ref=f16e55] [cursor=pointer]:
+                  - /url: /repos
+            - link "You have no unread notifications (g then n)" [ref=f16e58] [cursor=pointer]:
+              - /url: /notifications
+            - button "Open user navigation menu" [ref=f16e62] [cursor=pointer]:
+              - img "pform" [ref=f16e63]
+        - heading "Repository navigation" [level=2] [ref=f16e64]
+        - navigation "Repository" [ref=f16e65]:
+          - list [ref=f16e66]:
+            - listitem [ref=f16e67]:
+              - link "Code" [ref=f16e68] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder
+            - listitem [ref=f16e70]:
+              - link "Issues" [ref=f16e71] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/issues
+            - listitem [ref=f16e73]:
+              - link "Pull requests (1)" [ref=f16e74] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/pulls
+                - generic [ref=f16e75]: Pull requests
+                - generic [ref=f16e76]:
+                  - generic [ref=f16e77]: "1"
+                  - generic [ref=f16e78]: (1)
+            - listitem [ref=f16e79]:
+              - link "Agents" [ref=f16e80] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/agents?author=PFORMSatox
+            - listitem [ref=f16e82]:
+              - link "Actions" [ref=f16e83] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/actions
+            - listitem [ref=f16e85]:
+              - link "Projects" [ref=f16e86] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/projects
+            - listitem [ref=f16e88]:
+              - link "Security and quality" [ref=f16e89] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/security
+            - listitem [ref=f16e91]:
+              - link "Insights" [ref=f16e92] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/pulse
+            - listitem [ref=f16e94]:
+              - link "Settings" [ref=f16e95] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/settings
+    - main [ref=f16e100]:
+      - generic [ref=f16e113]:
+        - generic [ref=f16e118]:
+          - generic [ref=f16e121]:
+            - img "PFORMSatox" [ref=f16e122]
+            - generic "satoxcoin-seeder" [ref=f16e123]:
+              - strong [ref=f16e124]:
+                - link "satoxcoin-seeder" [ref=f16e125] [cursor=pointer]:
+                  - /url: /PFORMSatox/satoxcoin-seeder
+            - generic [ref=f16e126]: Public
+          - list [ref=f16e128]:
+            - listitem [ref=f16e129]:
+              - button "Pin PFORMSatox/satoxcoin-seeder" [ref=f16e130] [cursor=pointer]:
+                - generic [ref=f16e131]: Pin
+            - listitem [ref=f16e133]:
+              - 'button "Watch: Participating in PFORMSatox/satoxcoin-seeder. Click to change subscription settings." [ref=f16e134] [cursor=pointer]':
+                - generic [ref=f16e135]:
+                  - generic [ref=f16e136]: Watch
+                  - generic:
+                    - generic: "0"
+                    - generic: (0)
+            - listitem [ref=f16e137]:
+              - button "You own PFORMSatox/satoxcoin-seeder and are not a member of any organizations" [ref=f16e138]:
+                - generic [ref=f16e140]:
+                  - text: Fork
+                  - generic [ref=f16e141]: "0"
+                  - generic [ref=f16e142]: (0)
+            - listitem [ref=f16e143]:
+              - generic [ref=f16e144]:
+                - button "Star PFORMSatox/satoxcoin-seeder" [ref=f16e147] [cursor=pointer]:
+                  - generic [ref=f16e149]:
+                    - text: Star
+                    - generic [ref=f16e150]: "0"
+                    - generic [ref=f16e151]: (0)
+                - button "Star lists" [ref=f16e153] [cursor=pointer]
+        - generic [ref=f16e156]:
+          - generic [ref=f16e159]:
+            - region [ref=f16e161]:
+              - generic [ref=f16e165]:
+                - generic [ref=f16e166]:
+                  - heading "Your main branch isn't protected" [level=2] [ref=f16e167]
+                  - generic [ref=f16e169]:
+                    - text: Protect this branch from force pushing or deletion, or require status checks before merging.
+                    - link "View documentation." [ref=f16e170] [cursor=pointer]:
+                      - /url: https://docs.github.com/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets
+                - generic [ref=f16e172]:
+                  - button "Dismiss" [ref=f16e173] [cursor=pointer]
+                  - link "Protect this branch" [ref=f16e176] [cursor=pointer]:
+                    - /url: /PFORMSatox/satoxcoin-seeder/settings/rules/new?target=branch&enforcement=disabled
+            - generic [ref=f16e179]:
+              - generic [ref=f16e180]:
+                - button "main branch" [ref=f16e182] [cursor=pointer]:
+                  - generic [ref=f16e183]: main
+                - generic [ref=f16e187]:
+                  - link "Go to Branches page" [ref=f16e188] [cursor=pointer]:
+                    - /url: /PFORMSatox/satoxcoin-seeder/branches
+                  - link "Go to Tags page" [ref=f16e191] [cursor=pointer]:
+                    - /url: /PFORMSatox/satoxcoin-seeder/tags
+              - generic [ref=f16e194]:
+                - generic [ref=f16e195]:
+                  - button "Go to file" [ref=f16e197] [cursor=pointer]
+                  - generic [ref=f16e200]:
+                    - heading "Add file" [level=2] [ref=f16e201]
+                    - button "Add file" [ref=f16e202] [cursor=pointer]
+                - button "Code" [ref=f16e207] [cursor=pointer]
+            - generic [ref=f16e210]:
+              - generic [ref=f16e211]:
+                - heading "Folders and files" [level=2] [ref=f16e212]
+                - table "Folders and files" [ref=f16e213]:
+                  - rowgroup:
+                    - row "Name Last commit message Last commit date":
+                      - columnheader "Name"
+                      - columnheader "Last commit message"
+                      - columnheader "Last commit date"
+                  - rowgroup [ref=f16e214]:
+                    - row [ref=f16e215]:
+                      - cell "Latest commit History View commit history for this file." [ref=f16e216]:
+                        - generic [ref=f16e217]:
+                          - heading "Latest commit" [level=2] [ref=f16e218]
+                          - generic [ref=f16e221]:
+                            - heading "History" [level=2] [ref=f16e222]
+                            - link "View commit history for this file." [ref=f16e224] [cursor=pointer]:
+                              - /url: /PFORMSatox/satoxcoin-seeder/commits/main/
+                    - row ".github, (Directory)" [ref=f16e226]:
+                      - cell [ref=f16e227]:
+                        - link ".github, (Directory)" [ref=f16e234] [cursor=pointer]:
+                          - /url: /PFORMSatox/satoxcoin-seeder/tree/main/.github
+                          - text: .github
+                      - cell [ref=f16e235]
+                      - cell [ref=f16e237]
+                    - row "bin, (Directory)" [ref=f16e240]:
+                      - cell [ref=f16e241]:
+                        - link "bin, (Directory)" [ref=f16e248] [cursor=pointer]:
+                          - /url: /PFORMSatox/satoxcoin-seeder/tree/main/bin
+                          - text: bin
+                      - cell [ref=f16e249]
+                      - cell [ref=f16e251]
+                    - row "crates, (Directory)" [ref=f16e254]:
+                      - cell [ref=f16e255]:
+                        - link "crates, (Directory)" [ref=f16e262] [cursor=pointer]:
+                          - /url: /PFORMSatox/satoxcoin-seeder/tree/main/crates
+                          - text: crates
+                      - cell [ref=f16e263]
+                      - cell [ref=f16e265]
+                    - row ".gitignore, (File)" [ref=f16e268]:
+                      - cell [ref=f16e269]:
+                        - link ".gitignore, (File)" [ref=f16e276] [cursor=pointer]:
+                          - /url: /PFORMSatox/satoxcoin-seeder/blob/main/.gitignore
+                          - text: .gitignore
+                      - cell [ref=f16e277]
+                      - cell [ref=f16e279]
+                    - row "Cargo.lock, (File)" [ref=f16e282]:
+                      - cell [ref=f16e283]:
+                        - link "Cargo.lock, (File)" [ref=f16e290] [cursor=pointer]:
+                          - /url: /PFORMSatox/satoxcoin-seeder/blob/main/Cargo.lock
+                          - text: Cargo.lock
+                      - cell [ref=f16e291]
+                      - cell [ref=f16e293]
+                    - row "Cargo.toml, (File)" [ref=f16e296]:
+                      - cell [ref=f16e297]:
+                        - link "Cargo.toml, (File)" [ref=f16e304] [cursor=pointer]:
+                          - /url: /PFORMSatox/satoxcoin-seeder/blob/main/Cargo.toml
+                          - text: Cargo.toml
+                      - cell [ref=f16e305]
+                      - cell [ref=f16e307]
+                    - row "LICENSE, (File)" [ref=f16e310]:
+                      - cell [ref=f16e311]:
+                        - link "LICENSE, (File)" [ref=f16e318] [cursor=pointer]:
+                          - /url: /PFORMSatox/satoxcoin-seeder/blob/main/LICENSE
+                          - text: LICENSE
+                      - cell [ref=f16e319]
+                      - cell [ref=f16e321]
+                    - row "README.md, (File)" [ref=f16e324]:
+                      - cell [ref=f16e325]:
+                        - link "README.md, (File)" [ref=f16e332] [cursor=pointer]:
+                          - /url: /PFORMSatox/satoxcoin-seeder/blob/main/README.md
+                          - text: README.md
+                      - cell [ref=f16e333]
+                      - cell [ref=f16e335]
+                    - row "RELEASE.md, (File)" [ref=f16e338]:
+                      - cell [ref=f16e339]:
+                        - link "RELEASE.md, (File)" [ref=f16e346] [cursor=pointer]:
+                          - /url: /PFORMSatox/satoxcoin-seeder/blob/main/RELEASE.md
+                          - text: RELEASE.md
+                      - cell [ref=f16e347]
+                      - cell [ref=f16e349]
+                    - row "deny.toml, (File)" [ref=f16e352]:
+                      - cell [ref=f16e353]:
+                        - link "deny.toml, (File)" [ref=f16e360] [cursor=pointer]:
+                          - /url: /PFORMSatox/satoxcoin-seeder/blob/main/deny.toml
+                          - text: deny.toml
+                      - cell [ref=f16e361]
+                      - cell [ref=f16e363]
+                    - row "rust-toolchain.toml, (File)" [ref=f16e366]:
+                      - cell [ref=f16e367]:
+                        - link "rust-toolchain.toml, (File)" [ref=f16e374] [cursor=pointer]:
+                          - /url: /PFORMSatox/satoxcoin-seeder/blob/main/rust-toolchain.toml
+                          - text: rust-toolchain.toml
+                      - cell [ref=f16e375]
+                      - cell [ref=f16e377]
+                    - row "settings.toml, (File)" [ref=f16e380]:
+                      - cell [ref=f16e381]:
+                        - link "settings.toml, (File)" [ref=f16e388] [cursor=pointer]:
+                          - /url: /PFORMSatox/satoxcoin-seeder/blob/main/settings.toml
+                          - text: settings.toml
+                      - cell [ref=f16e389]
+                      - cell [ref=f16e391]
+              - generic [ref=f16e395]:
+                - generic [ref=f16e396]:
+                  - heading "Repository files navigation" [level=2] [ref=f16e397]
+                  - navigation "Repository files" [ref=f16e398]:
+                    - list [ref=f16e399]:
+                      - listitem [ref=f16e400]:
+                        - link "README" [ref=f16e401] [cursor=pointer]:
+                          - /url: "#"
+                      - listitem [ref=f16e403]:
+                        - link "MIT license" [ref=f16e404] [cursor=pointer]:
+                          - /url: "#"
+                  - button "Edit file" [ref=f16e406] [cursor=pointer]
+                  - button "Outline" [ref=f16e409] [cursor=pointer]
+                - article [ref=f16e413]:
+                  - generic [ref=f16e414]:
+                    - heading "Satoxcoin Seeder" [level=1] [ref=f16e415]
+                    - 'link "Permalink: Satoxcoin Seeder" [ref=f16e416] [cursor=pointer]':
+                      - /url: "#satoxcoin-seeder"
+                  - paragraph [ref=f16e419]: DNS seed crawler for the Satoxcoin network. Discovers and monitors active Satoxcoin nodes, then serves them via a built-in DNS server. Written in Rust.
+                  - paragraph [ref=f16e420]:
+                    - text: This is a port of the
+                    - link "bitcoin-seeder" [ref=f16e421] [cursor=pointer]:
+                      - /url: https://github.com/sipa/bitcoin-seeder
+                    - text: approach, adapted for Satoxcoin parameters (KawPoW, port 60777).
+                  - generic [ref=f16e422]:
+                    - heading "Features" [level=2] [ref=f16e423]
+                    - 'link "Permalink: Features" [ref=f16e424] [cursor=pointer]':
+                      - /url: "#features"
+                  - list [ref=f16e427]:
+                    - listitem [ref=f16e428]:
+                      - strong [ref=f16e429]: P2P crawler
+                      - text: — connects to discovered nodes, validates protocol version, checks chain height and sync status
+                    - listitem [ref=f16e430]:
+                      - strong [ref=f16e431]: Exponential-decay scoring
+                      - text: — rates nodes by reliability, not just uptime
+                    - listitem [ref=f16e432]:
+                      - strong [ref=f16e433]: Embedded DNS server
+                      - text: — serves A/AAAA/SOA/NS records directly (raw UDP, no libunbound dependency)
+                    - listitem [ref=f16e434]:
+                      - strong [ref=f16e435]: Ban/ignore system
+                      - text: — filters misbehaving or low-version nodes
+                    - listitem [ref=f16e436]:
+                      - strong [ref=f16e437]: Cloudflare DNS publish
+                      - text: — pushes seed results to Cloudflare DNS as A records (
+                      - code [ref=f16e438]: dnsseed-publish
+                      - text: binary)
+                    - listitem [ref=f16e439]:
+                      - strong [ref=f16e440]: Live stats
+                      - text: — periodic stats logging via tracing
+                    - listitem [ref=f16e441]:
+                      - strong [ref=f16e442]: Block height monitoring
+                      - text: — fetches latest block height from explorer API to reject out-of-sync nodes
+                  - generic [ref=f16e443]:
+                    - heading "Project Structure" [level=2] [ref=f16e444]
+                    - 'link "Permalink: Project Structure" [ref=f16e445] [cursor=pointer]':
+                      - /url: "#project-structure"
+                  - generic [ref=f16e448]:
+                    - code [ref=f16e450]: "satoxcoin-seeder/ ├── Cargo.toml # Workspace root ├── deny.toml # cargo-deny configuration ├── settings.toml # Network parameters ├── bin/ │ ├── seeder/ # Main crawler + DNS daemon │ └── dnsseed-publish/ # Cloudflare DNS publisher └── crates/ ├── seeder-core/ # Core types: config, net, db, serialize, p2p handshake ├── dns-server/ # Raw UDP DNS server (no bind dependency) └── seeder-publish/ # Cloudflare API client + dump parser"
+                    - button "Copy code to clipboard" [ref=f16e452] [cursor=pointer]
+                  - generic [ref=f16e456]:
+                    - heading "Build" [level=2] [ref=f16e457]
+                    - 'link "Permalink: Build" [ref=f16e458] [cursor=pointer]':
+                      - /url: "#build"
+                  - generic [ref=f16e461]:
+                    - generic [ref=f16e462]: cargo build --release
+                    - button "Copy code to clipboard" [ref=f16e464] [cursor=pointer]
+                  - paragraph [ref=f16e468]: Requires Rust 1.75+. No external C libraries needed.
+                  - generic [ref=f16e469]:
+                    - heading "Usage" [level=2] [ref=f16e470]
+                    - 'link "Permalink: Usage" [ref=f16e471] [cursor=pointer]':
+                      - /url: "#usage"
+                  - generic [ref=f16e474]:
+                    - heading "Seeder Daemon" [level=3] [ref=f16e475]
+                    - 'link "Permalink: Seeder Daemon" [ref=f16e476] [cursor=pointer]':
+                      - /url: "#seeder-daemon"
+                  - generic [ref=f16e479]:
+                    - generic [ref=f16e480]: ./target/release/seeder -h <hostname> -n <nameserver> -m <email> --config settings.toml
+                    - button "Copy code to clipboard" [ref=f16e482] [cursor=pointer]
+                  - paragraph [ref=f16e486]: "Common flags:"
+                  - table [ref=f16e488]:
+                    - rowgroup [ref=f16e489]:
+                      - row [ref=f16e490]:
+                        - columnheader "Flag" [ref=f16e491]
+                        - columnheader "Description" [ref=f16e492]
+                    - rowgroup [ref=f16e493]:
+                      - row [ref=f16e494]:
+                        - cell [ref=f16e495]:
+                          - code [ref=f16e496]: "-h"
+                        - cell [ref=f16e497]:
+                          - text: Hostname of the DNS seed (e.g.
+                          - code [ref=f16e498]: xnode1.satoverse.io
+                          - text: )
+                      - row [ref=f16e499]:
+                        - cell [ref=f16e500]:
+                          - code [ref=f16e501]: "-n"
+                        - cell "Nameserver hostname for NS records" [ref=f16e502]
+                      - row [ref=f16e503]:
+                        - cell [ref=f16e504]:
+                          - code [ref=f16e505]: "-m"
+                        - cell [ref=f16e506]:
+                          - text: E-mail address for SOA records (e.g.
+                          - code [ref=f16e507]: admin.example.com
+                          - text: )
+                      - row [ref=f16e508]:
+                        - cell [ref=f16e509]:
+                          - code [ref=f16e510]: "-t"
+                        - 'cell "Number of crawler threads (default: 96)" [ref=f16e511]'
+                      - row [ref=f16e512]:
+                        - cell [ref=f16e513]:
+                          - code [ref=f16e514]: "-d"
+                        - 'cell "DNS server threads (default: 4)" [ref=f16e515]'
+                      - row [ref=f16e516]:
+                        - cell [ref=f16e517]:
+                          - code [ref=f16e518]: "-p"
+                        - 'cell "DNS UDP port (default: 53)" [ref=f16e519]'
+                      - row [ref=f16e520]:
+                        - cell [ref=f16e521]:
+                          - code [ref=f16e522]: "-a"
+                        - cell [ref=f16e523]:
+                          - text: "Address to listen on (default:"
+                          - code [ref=f16e524]: "::"
+                          - text: )
+                      - row [ref=f16e525]:
+                        - cell [ref=f16e526]:
+                          - code [ref=f16e527]: "-f"
+                        - cell [ref=f16e528]:
+                          - text: "Force IP version:"
+                          - code [ref=f16e529]: a
+                          - text: =all,
+                          - code [ref=f16e530]: "4"
+                          - text: =IPv4 only,
+                          - code [ref=f16e531]: "6"
+                          - text: "=IPv6 only (default:"
+                          - code [ref=f16e532]: a
+                          - text: )
+                      - row [ref=f16e533]:
+                        - cell [ref=f16e534]:
+                          - code [ref=f16e535]: "--config"
+                        - cell [ref=f16e536]:
+                          - text: "Config file path (default:"
+                          - code [ref=f16e537]: settings.conf
+                          - text: )
+                      - row [ref=f16e538]:
+                        - cell [ref=f16e539]:
+                          - code [ref=f16e540]: "--wipe-ban"
+                        - cell "Clear banned node list on start" [ref=f16e541]
+                      - row [ref=f16e542]:
+                        - cell [ref=f16e543]:
+                          - code [ref=f16e544]: "--wipe-ignore"
+                        - cell "Clear ignored node list on start" [ref=f16e545]
+                      - row [ref=f16e546]:
+                        - cell [ref=f16e547]:
+                          - code [ref=f16e548]: "--dump-all"
+                        - cell "Dump all known nodes at shutdown" [ref=f16e549]
+                      - row [ref=f16e550]:
+                        - cell [ref=f16e551]:
+                          - code [ref=f16e552]: "--no-dns"
+                        - cell "Disable the DNS server (crawl only)" [ref=f16e553]
+                  - generic [ref=f16e554]:
+                    - heading "Cloudflare Publisher" [level=3] [ref=f16e555]
+                    - 'link "Permalink: Cloudflare Publisher" [ref=f16e556] [cursor=pointer]':
+                      - /url: "#cloudflare-publisher"
+                  - generic [ref=f16e559]:
+                    - generic [ref=f16e560]: ./target/release/dnsseed-publish --config settings.toml
+                    - button "Copy code to clipboard" [ref=f16e562] [cursor=pointer]
+                  - paragraph [ref=f16e566]:
+                    - text: Reads
+                    - code [ref=f16e567]: dnsseed.dump
+                    - text: (produced by the seeder at shutdown) and reconciles it with Cloudflare DNS A records on the configured domain.
+                  - paragraph [ref=f16e568]: "Common flags:"
+                  - table [ref=f16e570]:
+                    - rowgroup [ref=f16e571]:
+                      - row [ref=f16e572]:
+                        - columnheader "Flag" [ref=f16e573]
+                        - columnheader "Description" [ref=f16e574]
+                    - rowgroup [ref=f16e575]:
+                      - row [ref=f16e576]:
+                        - cell [ref=f16e577]:
+                          - code [ref=f16e578]: "--config"
+                        - cell [ref=f16e579]:
+                          - text: "Config file path (default:"
+                          - code [ref=f16e580]: settings.conf
+                          - text: )
+                      - row [ref=f16e581]:
+                        - cell [ref=f16e582]:
+                          - code [ref=f16e583]: "--dump"
+                        - cell "Seed dump file path (overrides config)" [ref=f16e584]
+                      - row [ref=f16e585]:
+                        - cell [ref=f16e586]:
+                          - code [ref=f16e587]: "--api-token"
+                        - cell "Cloudflare API token (overrides config)" [ref=f16e588]
+                      - row [ref=f16e589]:
+                        - cell [ref=f16e590]:
+                          - code [ref=f16e591]: "--domain"
+                        - cell "Cloudflare domain (overrides config)" [ref=f16e592]
+                      - row [ref=f16e593]:
+                        - cell [ref=f16e594]:
+                          - code [ref=f16e595]: "--prefix"
+                        - cell "Cloudflare prefix (overrides config)" [ref=f16e596]
+                      - row [ref=f16e597]:
+                        - cell [ref=f16e598]:
+                          - code [ref=f16e599]: "--port"
+                        - cell "Wallet port for filtering (overrides config)" [ref=f16e600]
+                      - row [ref=f16e601]:
+                        - cell [ref=f16e602]:
+                          - code [ref=f16e603]: "--max-seeds"
+                        - 'cell "Maximum number of seeds (default: 25)" [ref=f16e604]'
+                  - generic [ref=f16e605]:
+                    - heading "Configuration" [level=3] [ref=f16e606]
+                    - 'link "Permalink: Configuration" [ref=f16e607] [cursor=pointer]':
+                      - /url: "#configuration"
+                  - paragraph [ref=f16e610]:
+                    - code [ref=f16e611]: settings.toml
+                    - text: "contains all Satoxcoin network parameters:"
+                  - generic [ref=f16e612]:
+                    - generic [ref=f16e613]:
+                      - text: protocol_version =
+                      - generic [ref=f16e614]: "\"70028\""
+                      - text: init_proto_version =
+                      - generic [ref=f16e615]: "\"209\""
+                      - text: min_peer_proto_version =
+                      - generic [ref=f16e616]: "\"70025\""
+                      - text: pchMessageStart_0 =
+                      - generic [ref=f16e617]: "\"0x63\""
+                      - generic [ref=f16e618]: "# S"
+                      - text: pchMessageStart_1 =
+                      - generic [ref=f16e619]: "\"0x56\""
+                      - generic [ref=f16e620]: "# A"
+                      - text: pchMessageStart_2 =
+                      - generic [ref=f16e621]: "\"0x65\""
+                      - generic [ref=f16e622]: "# T"
+                      - text: pchMessageStart_3 =
+                      - generic [ref=f16e623]: "\"0x65\""
+                      - generic [ref=f16e624]: "# T"
+                      - text: wallet_port =
+                      - generic [ref=f16e625]: "\"60777\""
+                      - text: explorer_url =
+                      - generic [ref=f16e626]: "\"https://xplore.satoverse.io/api/getblockcount\""
+                      - generic [ref=f16e627]: "# Cloudflare DNS publish (optional)"
+                      - text: cf_domain =
+                      - generic [ref=f16e628]: "\"\""
+                      - generic [ref=f16e629]: "# Your domain"
+                      - text: cf_domain_prefix =
+                      - generic [ref=f16e630]: "\"\""
+                      - generic [ref=f16e631]: "# Subdomain for seed records"
+                      - text: cf_api_key =
+                      - generic [ref=f16e632]: "\"\""
+                      - generic [ref=f16e633]: "# Cloudflare API token"
+                      - text: cf_seed_dump =
+                      - generic [ref=f16e634]: "\"dnsseed.dump\""
+                      - generic [ref=f16e635]: "# Seed output file"
+                    - button "Copy code to clipboard" [ref=f16e637] [cursor=pointer]
+                  - generic [ref=f16e641]:
+                    - heading "Tests" [level=2] [ref=f16e642]
+                    - 'link "Permalink: Tests" [ref=f16e643] [cursor=pointer]':
+                      - /url: "#tests"
+                  - generic [ref=f16e646]:
+                    - generic [ref=f16e647]: cargo test
+                    - button "Copy code to clipboard" [ref=f16e649] [cursor=pointer]
+                  - generic [ref=f16e653]:
+                    - heading "License" [level=2] [ref=f16e654]
+                    - 'link "Permalink: License" [ref=f16e655] [cursor=pointer]':
+                      - /url: "#license"
+                  - paragraph [ref=f16e658]:
+                    - text: MIT — see
+                    - link "LICENSE" [ref=f16e659] [cursor=pointer]:
+                      - /url: /PFORMSatox/satoxcoin-seeder/blob/main/LICENSE
+                    - text: .
+                  - generic [ref=f16e660]:
+                    - heading "Author" [level=2] [ref=f16e661]
+                    - 'link "Permalink: Author" [ref=f16e662] [cursor=pointer]':
+                      - /url: "#author"
+                  - paragraph [ref=f16e665]: Satoxcoin Core Developers
+          - generic [ref=f16e668]:
+            - generic [ref=f16e669]:
+              - heading "About Edit repository metadata" [level=2] [ref=f16e670]:
+                - generic [ref=f16e672]:
+                  - generic [ref=f16e673]: About
+                  - button "Edit repository metadata" [ref=f16e674] [cursor=pointer]
+              - generic [ref=f16e677]: No description, website, or topics provided.
+              - heading "Resources" [level=3] [ref=f16e678]
+              - link "Readme" [ref=f16e680] [cursor=pointer]:
+                - /url: "#readme-ov-file"
+              - link "MIT license" [ref=f16e684] [cursor=pointer]:
+                - /url: "#MIT-1-ov-file"
+              - link "Activity" [ref=f16e688] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/activity
+              - heading "Stars" [level=3] [ref=f16e691]
+              - link [ref=f16e693] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/stargazers
+                - strong [ref=f16e697]: "0"
+                - text: stars
+              - heading "Watchers" [level=3] [ref=f16e698]
+              - link [ref=f16e700] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/watchers
+                - strong [ref=f16e704]: "0"
+                - text: watching
+              - heading "Forks" [level=3] [ref=f16e705]
+              - link [ref=f16e707] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/forks
+                - strong [ref=f16e711]: "0"
+                - text: forks
+            - heading "Releases" [level=2] [ref=f16e713]
+            - heading "Packages" [level=2] [ref=f16e717]
+            - heading "Contributors" [level=2] [ref=f16e720]
+            - heading "Languages" [level=2] [ref=f16e723]
+    - contentinfo [ref=f16e726]:
+      - heading "Footer" [level=2] [ref=f16e727]
+      - generic [ref=f16e728]:
+        - generic [ref=f16e729]:
+          - link "GitHub Homepage" [ref=f16e730] [cursor=pointer]:
+            - /url: https://github.com
+          - generic [ref=f16e733]: © 2026 GitHub, Inc.
+        - navigation "Footer" [ref=f16e734]:
+          - heading "Footer navigation" [level=3] [ref=f16e735]
+          - list "Footer navigation" [ref=f16e736]:
+            - listitem [ref=f16e737]:
+              - link "Terms" [ref=f16e738] [cursor=pointer]:
+                - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+            - listitem [ref=f16e739]:
+              - link "Privacy" [ref=f16e740] [cursor=pointer]:
+                - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+            - listitem [ref=f16e741]:
+              - link "Security" [ref=f16e742] [cursor=pointer]:
+                - /url: https://github.com/security
+            - listitem [ref=f16e743]:
+              - link "Status" [ref=f16e744] [cursor=pointer]:
+                - /url: https://www.githubstatus.com/
+            - listitem [ref=f16e745]:
+              - link "Community" [ref=f16e746] [cursor=pointer]:
+                - /url: https://github.community/
+            - listitem [ref=f16e747]:
+              - link "Docs" [ref=f16e748] [cursor=pointer]:
+                - /url: https://docs.github.com/
+            - listitem [ref=f16e749]:
+              - link "Contact" [ref=f16e750] [cursor=pointer]:
+                - /url: https://support.github.com?tags=dotcom-footer
+            - listitem [ref=f16e751]:
+              - button "Manage cookies" [ref=f16e753] [cursor=pointer]
+            - listitem [ref=f16e754]:
+              - button "Do not share my personal information" [ref=f16e756] [cursor=pointer]
+  - alert [ref=f16e759]
