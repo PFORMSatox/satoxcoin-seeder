@@ -1,0 +1,200 @@
+- generic [ref=f17e2]:
+  - generic [ref=f17e3]:
+    - link "Skip to content" [ref=f17e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner "Global navigation menu" [ref=f17e8]:
+      - generic [ref=f17e9]:
+        - generic [ref=f17e10]:
+          - button "Open menu" [ref=f17e12] [cursor=pointer]
+          - link "Homepage (g then d)" [ref=f17e15] [cursor=pointer]:
+            - /url: /
+        - generic [ref=f17e18]:
+          - navigation "Breadcrumbs" [ref=f17e19]:
+            - list [ref=f17e20]:
+              - listitem [ref=f17e21]:
+                - link "PFORMSatox" [ref=f17e22] [cursor=pointer]:
+                  - /url: /PFORMSatox
+              - listitem [ref=f17e24]:
+                - link "satoxcoin-seeder" [ref=f17e25] [cursor=pointer]:
+                  - /url: /PFORMSatox/satoxcoin-seeder
+                - button "Switch repository (alt shift r)" [ref=f17e26] [cursor=pointer]
+          - button "Search or jump to… (forward slash)" [ref=f17e29] [cursor=pointer]
+        - generic [ref=f17e32]:
+          - generic [ref=f17e33]:
+            - generic [ref=f17e36]:
+              - link "Chat with Copilot" [ref=f17e38] [cursor=pointer]:
+                - /url: /copilot
+              - button "Open Copilot…" [ref=f17e43] [cursor=pointer]
+            - button "Create new..." [ref=f17e45] [cursor=pointer]
+            - generic [ref=f17e47]:
+              - link "All issues" [ref=f17e48] [cursor=pointer]:
+                - /url: /issues
+              - link "All pull requests" [ref=f17e52] [cursor=pointer]:
+                - /url: /pulls
+              - link "All repositories" [ref=f17e55] [cursor=pointer]:
+                - /url: /repos
+          - link "You have unread notifications (g then n)" [ref=f17e58] [cursor=pointer]:
+            - /url: /notifications
+          - button "Open user navigation menu" [ref=f17e62] [cursor=pointer]:
+            - img "pform" [ref=f17e63]
+      - heading "Repository navigation" [level=2] [ref=f17e64]
+      - navigation "Repository" [ref=f17e65]:
+        - list [ref=f17e66]:
+          - listitem [ref=f17e67]:
+            - link "Code" [ref=f17e68] [cursor=pointer]:
+              - /url: /PFORMSatox/satoxcoin-seeder
+          - listitem [ref=f17e70]:
+            - link "Issues" [ref=f17e71] [cursor=pointer]:
+              - /url: /PFORMSatox/satoxcoin-seeder/issues
+          - listitem [ref=f17e73]:
+            - link "Pull requests (1)" [ref=f17e74] [cursor=pointer]:
+              - /url: /PFORMSatox/satoxcoin-seeder/pulls
+              - generic [ref=f17e75]: Pull requests
+              - generic [ref=f17e76]:
+                - generic [ref=f17e77]: "1"
+                - generic [ref=f17e78]: (1)
+          - listitem [ref=f17e79]:
+            - link "Agents" [ref=f17e80] [cursor=pointer]:
+              - /url: /PFORMSatox/satoxcoin-seeder/agents?author=PFORMSatox
+          - listitem [ref=f17e82]:
+            - link "Actions" [ref=f17e83] [cursor=pointer]:
+              - /url: /PFORMSatox/satoxcoin-seeder/actions
+          - listitem [ref=f17e85]:
+            - link "Projects" [ref=f17e86] [cursor=pointer]:
+              - /url: /PFORMSatox/satoxcoin-seeder/projects
+          - listitem [ref=f17e88]:
+            - link "Security and quality" [ref=f17e89] [cursor=pointer]:
+              - /url: /PFORMSatox/satoxcoin-seeder/security
+          - listitem [ref=f17e91]:
+            - link "Insights" [ref=f17e92] [cursor=pointer]:
+              - /url: /PFORMSatox/satoxcoin-seeder/pulse
+          - listitem [ref=f17e94]:
+            - link "Settings" [ref=f17e95] [cursor=pointer]:
+              - /url: /PFORMSatox/satoxcoin-seeder/settings
+  - main [ref=f17e107]:
+    - generic [ref=f17e108]:
+      - 'heading "Settings: PFORMSatox/satoxcoin-seeder" [level=1] [ref=f17e430]'
+      - generic [ref=f17e432]:
+        - navigation "General settings" [ref=f17e435]:
+          - list [ref=f17e437]:
+            - listitem [ref=f17e438]:
+              - link "General" [ref=f17e439] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/settings
+            - listitem [ref=f17e441]
+            - listitem [ref=f17e442]:
+              - generic [ref=f17e445]:
+                - heading "Access" [level=2] [ref=f17e447]
+                - list "Access" [ref=f17e448]:
+                  - listitem [ref=f17e449]:
+                    - link "Collaborators" [ref=f17e450] [cursor=pointer]:
+                      - /url: /PFORMSatox/satoxcoin-seeder/settings/access
+                  - listitem [ref=f17e452]:
+                    - button "Moderation options" [ref=f17e453] [cursor=pointer]
+            - listitem [ref=f17e455]
+            - listitem [ref=f17e456]:
+              - generic [ref=f17e459]:
+                - heading "Code, planning, and automation" [level=2] [ref=f17e461]
+                - list "Code, planning, and automation" [ref=f17e462]:
+                  - listitem [ref=f17e463]:
+                    - link "Branches" [ref=f17e464] [cursor=pointer]:
+                      - /url: /PFORMSatox/satoxcoin-seeder/settings/branches
+                  - listitem [ref=f17e466]:
+                    - link "Tags" [ref=f17e467] [cursor=pointer]:
+                      - /url: /PFORMSatox/satoxcoin-seeder/settings/tag_protection
+                  - listitem [ref=f17e469] [cursor=pointer]:
+                    - button "Rules" [ref=f17e470]
+                  - listitem [ref=f17e472]:
+                    - button "Actions" [ref=f17e473] [cursor=pointer]
+                  - listitem [ref=f17e475]:
+                    - link "Webhooks" [ref=f17e476] [cursor=pointer]:
+                      - /url: /PFORMSatox/satoxcoin-seeder/settings/hooks
+                  - listitem [ref=f17e478]:
+                    - button "Copilot" [ref=f17e479] [cursor=pointer]
+                  - listitem [ref=f17e481]:
+                    - button "Planning" [ref=f17e482] [cursor=pointer]
+                  - listitem [ref=f17e484]:
+                    - link "Environments" [ref=f17e485] [cursor=pointer]:
+                      - /url: /PFORMSatox/satoxcoin-seeder/settings/environments
+                  - listitem [ref=f17e487]:
+                    - link "Codespaces" [ref=f17e488] [cursor=pointer]:
+                      - /url: /PFORMSatox/satoxcoin-seeder/settings/codespaces
+                  - listitem [ref=f17e490]:
+                    - link "Pages" [ref=f17e491] [cursor=pointer]:
+                      - /url: /PFORMSatox/satoxcoin-seeder/settings/pages
+            - listitem [ref=f17e493]
+            - listitem [ref=f17e494]:
+              - generic [ref=f17e497]:
+                - heading "Security and quality" [level=2] [ref=f17e499]
+                - list "Security and quality" [ref=f17e500]:
+                  - listitem [ref=f17e501]:
+                    - link "Advanced Security" [ref=f17e502] [cursor=pointer]:
+                      - /url: /PFORMSatox/satoxcoin-seeder/settings/security_analysis
+                  - listitem [ref=f17e504]:
+                    - link "Deploy keys" [ref=f17e505] [cursor=pointer]:
+                      - /url: /PFORMSatox/satoxcoin-seeder/settings/keys
+                  - listitem [ref=f17e507]:
+                    - button "Secrets and variables" [ref=f17e508] [cursor=pointer]
+            - listitem [ref=f17e510]
+            - listitem [ref=f17e511]:
+              - generic [ref=f17e514]:
+                - heading "Integrations" [level=2] [ref=f17e516]
+                - list "Integrations" [ref=f17e517]:
+                  - listitem [ref=f17e518]:
+                    - link "GitHub Apps" [ref=f17e519] [cursor=pointer]:
+                      - /url: /PFORMSatox/satoxcoin-seeder/settings/installations
+                  - listitem [ref=f17e521]:
+                    - link "Email notifications" [ref=f17e522] [cursor=pointer]:
+                      - /url: /PFORMSatox/satoxcoin-seeder/settings/notifications
+        - generic [ref=f17e524]:
+          - heading "Branch protection rules" [level=2] [ref=f17e526]
+          - generic [ref=f17e534]:
+            - paragraph [ref=f17e535]: Classic branch protections have not been configured
+            - generic [ref=f17e536]:
+              - paragraph [ref=f17e537]:
+                - text: Define branch rules to disable force pushing, prevent branches from being deleted, or require pull requests before merging. Learn more about
+                - link "repository rules" [ref=f17e538] [cursor=pointer]:
+                  - /url: https://docs.github.com/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets
+                - text: and
+                - link "protected branches" [ref=f17e539] [cursor=pointer]:
+                  - /url: https://docs.github.com/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branches
+                - text: .
+              - generic [ref=f17e540]:
+                - link "Add branch ruleset" [ref=f17e542] [cursor=pointer]:
+                  - /url: /PFORMSatox/satoxcoin-seeder/settings/rules/new?target=branch
+                - link "Add classic branch protection rule" [ref=f17e546] [cursor=pointer]:
+                  - /url: /PFORMSatox/satoxcoin-seeder/settings/branch_protection_rules/new
+  - contentinfo [ref=f17e397]:
+    - heading "Footer" [level=2] [ref=f17e398]
+    - generic [ref=f17e399]:
+      - generic [ref=f17e400]:
+        - link "GitHub Homepage" [ref=f17e401] [cursor=pointer]:
+          - /url: https://github.com
+        - generic [ref=f17e404]: © 2026 GitHub, Inc.
+      - navigation "Footer" [ref=f17e405]:
+        - heading "Footer navigation" [level=3] [ref=f17e406]
+        - list "Footer navigation" [ref=f17e407]:
+          - listitem [ref=f17e408]:
+            - link "Terms" [ref=f17e409] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+          - listitem [ref=f17e410]:
+            - link "Privacy" [ref=f17e411] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+          - listitem [ref=f17e412]:
+            - link "Security" [ref=f17e413] [cursor=pointer]:
+              - /url: https://github.com/security
+          - listitem [ref=f17e414]:
+            - link "Status" [ref=f17e415] [cursor=pointer]:
+              - /url: https://www.githubstatus.com/
+          - listitem [ref=f17e416]:
+            - link "Community" [ref=f17e417] [cursor=pointer]:
+              - /url: https://github.community/
+          - listitem [ref=f17e418]:
+            - link "Docs" [ref=f17e419] [cursor=pointer]:
+              - /url: https://docs.github.com/
+          - listitem [ref=f17e420]:
+            - link "Contact" [ref=f17e421] [cursor=pointer]:
+              - /url: https://support.github.com?tags=dotcom-footer
+          - listitem [ref=f17e422]:
+            - button "Manage cookies" [ref=f17e424] [cursor=pointer]
+          - listitem [ref=f17e425]:
+            - button "Do not share my personal information" [ref=f17e427] [cursor=pointer]

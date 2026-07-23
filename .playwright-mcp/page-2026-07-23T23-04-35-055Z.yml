@@ -1,0 +1,194 @@
+- generic [ref=f18e1]:
+  - generic [ref=f18e2]:
+    - generic [ref=f18e3]:
+      - link "Skip to content" [ref=f18e4] [cursor=pointer]:
+        - /url: "#start-of-content"
+      - banner "Global navigation menu" [ref=f18e8]:
+        - generic [ref=f18e9]:
+          - generic [ref=f18e10]:
+            - button "Open menu" [ref=f18e12] [cursor=pointer]
+            - link "Homepage (g then d)" [ref=f18e15] [cursor=pointer]:
+              - /url: /
+          - generic [ref=f18e18]:
+            - navigation "Breadcrumbs" [ref=f18e271]:
+              - list [ref=f18e272]:
+                - listitem [ref=f18e273]:
+                  - link "PFORMSatox" [ref=f18e274] [cursor=pointer]:
+                    - /url: /PFORMSatox
+                - listitem [ref=f18e276]:
+                  - link "satoxcoin-seeder" [ref=f18e277] [cursor=pointer]:
+                    - /url: /PFORMSatox/satoxcoin-seeder
+                  - button "Switch repository (alt shift r)" [ref=f18e278] [cursor=pointer]
+            - button "Search or jump to… (forward slash)" [ref=f18e29] [cursor=pointer]
+          - generic [ref=f18e32]:
+            - generic [ref=f18e33]:
+              - generic [ref=f18e36]:
+                - link "Chat with Copilot" [ref=f18e38] [cursor=pointer]:
+                  - /url: /copilot
+                - button "Open Copilot…" [ref=f18e43] [cursor=pointer]
+              - button "Create new..." [ref=f18e45] [cursor=pointer]
+              - generic [ref=f18e47]:
+                - link "All issues" [ref=f18e48] [cursor=pointer]:
+                  - /url: /issues
+                - link "All pull requests" [ref=f18e52] [cursor=pointer]:
+                  - /url: /pulls
+                - link "All repositories" [ref=f18e55] [cursor=pointer]:
+                  - /url: /repos
+            - link "You have unread notifications (g then n)" [ref=f18e58] [cursor=pointer]:
+              - /url: /notifications
+            - button "Open user navigation menu" [ref=f18e62] [cursor=pointer]:
+              - img "pform" [ref=f18e63]
+        - heading "Repository navigation" [level=2] [ref=f18e64]
+        - navigation "Repository" [ref=f18e65]:
+          - list [ref=f18e66]:
+            - listitem [ref=f18e67]:
+              - link "Code" [ref=f18e68] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder
+            - listitem [ref=f18e70]:
+              - link "Issues" [ref=f18e71] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/issues
+            - listitem [ref=f18e73]:
+              - link "Pull requests (1)" [active] [ref=f18e74] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/pulls
+                - generic [ref=f18e75]: Pull requests
+                - generic [ref=f18e76]:
+                  - generic [ref=f18e77]: "1"
+                  - generic [ref=f18e78]: (1)
+            - listitem [ref=f18e79]:
+              - link "Agents" [ref=f18e80] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/agents?author=PFORMSatox
+            - listitem [ref=f18e82]:
+              - link "Actions" [ref=f18e83] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/actions
+            - listitem [ref=f18e85]:
+              - link "Projects" [ref=f18e86] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/projects
+            - listitem [ref=f18e88]:
+              - link "Security and quality" [ref=f18e89] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/security
+            - listitem [ref=f18e91]:
+              - link "Insights" [ref=f18e92] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/pulse
+            - listitem [ref=f18e94]:
+              - link "Settings" [ref=f18e95] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/settings
+    - main [ref=f18e108]:
+      - generic [ref=f18e281]:
+        - 'heading "Pull requests: PFORMSatox/satoxcoin-seeder" [level=1] [ref=f18e282]'
+        - generic [ref=f18e285]:
+          - button "Dismiss" [ref=f18e286] [cursor=pointer]
+          - generic [ref=f18e287]:
+            - heading "Label issues and pull requests for new contributors" [level=2] [ref=f18e288]
+            - paragraph [ref=f18e289]:
+              - text: Now, GitHub will help potential first-time contributors
+              - link "discover issues" [ref=f18e290] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/contribute
+              - text: labeled with
+              - link "good first issue" [ref=f18e291] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/issues?q=is%3Apr+is%3Aopen+label%3A%22good+first+issue%22
+        - generic [ref=f18e292]:
+          - search [ref=f18e293]:
+            - group [ref=f18e294]:
+              - button "Filters" [ref=f18e295] [cursor=pointer]
+            - search "Issues" [ref=f18e298]:
+              - textbox "Search all issues" [ref=f18e299]: is:pr is:open
+            - navigation "Issue" [ref=f18e301]:
+              - link "Labels 9" [ref=f18e302] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/labels
+              - link "Milestones 0" [ref=f18e305] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/milestones
+          - link "New pull request" [ref=f18e310] [cursor=pointer]:
+            - /url: /PFORMSatox/satoxcoin-seeder/compare
+        - generic [ref=f18e315]:
+          - link "1 Open" [ref=f18e316] [cursor=pointer]:
+            - /url: /PFORMSatox/satoxcoin-seeder/pulls?q=is%3Aopen+is%3Apr
+          - link "0 Closed" [ref=f18e319] [cursor=pointer]:
+            - /url: /PFORMSatox/satoxcoin-seeder/pulls?q=is%3Apr+is%3Aclosed
+        - generic [ref=f18e322]:
+          - generic [ref=f18e323]:
+            - checkbox "Select all issues" [ref=f18e325]
+            - generic [ref=f18e327]:
+              - group [ref=f18e328]:
+                - button "Author" [ref=f18e329] [cursor=pointer]
+              - group [ref=f18e331]:
+                - button "Label" [ref=f18e332] [cursor=pointer]
+              - generic [ref=f18e334]:
+                - group [ref=f18e335]:
+                  - button "Projects" [ref=f18e336] [cursor=pointer]
+                - group [ref=f18e338]:
+                  - button "Milestones" [ref=f18e339] [cursor=pointer]
+                - group [ref=f18e341]:
+                  - button "Reviews" [ref=f18e342] [cursor=pointer]
+              - group [ref=f18e344]:
+                - button "Assignee" [ref=f18e345] [cursor=pointer]
+              - group [ref=f18e347]:
+                - button "Sort" [ref=f18e348] [cursor=pointer]
+          - heading "Pull requests list" [level=2] [ref=f18e350]
+          - group "Issues" [ref=f18e351]:
+            - generic [ref=f18e354]:
+              - 'checkbox "build(deps): bump the rust-deps group with 3 updates" [ref=f18e356]'
+              - generic "Open Pull Request" [ref=f18e358]
+              - generic [ref=f18e361]:
+                - 'link "build(deps): bump the rust-deps group with 3 updates" [ref=f18e362] [cursor=pointer]':
+                  - /url: /PFORMSatox/satoxcoin-seeder/pull/1
+                - group [ref=f18e364]:
+                  - img "0 / 6 checks OK" [ref=f18e366] [cursor=pointer]
+                - generic [ref=f18e368]:
+                  - generic [ref=f18e369]:
+                    - text: "#1 opened Jul 24, 20268 minutes ago by"
+                    - link "dependabot" [ref=f18e370] [cursor=pointer]:
+                      - /url: /PFORMSatox/satoxcoin-seeder/issues?q=is%3Apr+is%3Aopen+author%3Aapp%2Fdependabot
+                    - generic [ref=f18e371]: Bot
+                  - generic [ref=f18e373]:
+                    - text: •
+                    - link "Review required before merging" [ref=f18e374] [cursor=pointer]:
+                      - /url: /PFORMSatox/satoxcoin-seeder/pull/1#partial-pull-merging
+                      - text: Review required
+              - generic [ref=f18e375]:
+                - generic [ref=f18e378]:
+                  - generic "Assigned to"
+                - link "1 comment" [ref=f18e380] [cursor=pointer]:
+                  - /url: /PFORMSatox/satoxcoin-seeder/pull/1
+                  - text: "1"
+        - generic [ref=f18e383]:
+          - strong [ref=f18e386]: ProTip!
+          - text: Ears burning? Get @PFORMSatox mentions with
+          - link "mentions:PFORMSatox" [ref=f18e387] [cursor=pointer]:
+            - /url: /PFORMSatox/satoxcoin-seeder/issues?q=is%3Apr+is%3Aopen+mentions%3APFORMSatox
+          - text: .
+    - contentinfo [ref=f18e238]:
+      - heading "Footer" [level=2] [ref=f18e239]
+      - generic [ref=f18e240]:
+        - generic [ref=f18e241]:
+          - link "GitHub Homepage" [ref=f18e242] [cursor=pointer]:
+            - /url: https://github.com
+          - generic [ref=f18e245]: © 2026 GitHub, Inc.
+        - navigation "Footer" [ref=f18e246]:
+          - heading "Footer navigation" [level=3] [ref=f18e247]
+          - list "Footer navigation" [ref=f18e248]:
+            - listitem [ref=f18e249]:
+              - link "Terms" [ref=f18e250] [cursor=pointer]:
+                - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+            - listitem [ref=f18e251]:
+              - link "Privacy" [ref=f18e252] [cursor=pointer]:
+                - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+            - listitem [ref=f18e253]:
+              - link "Security" [ref=f18e254] [cursor=pointer]:
+                - /url: https://github.com/security
+            - listitem [ref=f18e255]:
+              - link "Status" [ref=f18e256] [cursor=pointer]:
+                - /url: https://www.githubstatus.com/
+            - listitem [ref=f18e257]:
+              - link "Community" [ref=f18e258] [cursor=pointer]:
+                - /url: https://github.community/
+            - listitem [ref=f18e259]:
+              - link "Docs" [ref=f18e260] [cursor=pointer]:
+                - /url: https://docs.github.com/
+            - listitem [ref=f18e261]:
+              - link "Contact" [ref=f18e262] [cursor=pointer]:
+                - /url: https://support.github.com?tags=dotcom-footer
+            - listitem [ref=f18e263]:
+              - button "Manage cookies" [ref=f18e265] [cursor=pointer]
+            - listitem [ref=f18e266]:
+              - button "Do not share my personal information" [ref=f18e268] [cursor=pointer]
+  - alert [ref=f18e388]

@@ -1,0 +1,382 @@
+- generic [active] [ref=f18e1]:
+  - generic [ref=f18e2]:
+    - generic [ref=f18e3]:
+      - link "Skip to content" [ref=f18e4] [cursor=pointer]:
+        - /url: "#start-of-content"
+      - banner "Global navigation menu" [ref=f18e8]:
+        - generic [ref=f18e9]:
+          - generic [ref=f18e10]:
+            - button "Open menu" [ref=f18e12] [cursor=pointer]
+            - link "Homepage (g then d)" [ref=f18e15] [cursor=pointer]:
+              - /url: /
+          - generic [ref=f18e18]:
+            - navigation "Breadcrumbs" [ref=f18e271]:
+              - list [ref=f18e272]:
+                - listitem [ref=f18e273]:
+                  - link "PFORMSatox" [ref=f18e274] [cursor=pointer]:
+                    - /url: /PFORMSatox
+                - listitem [ref=f18e276]:
+                  - link "satoxcoin-seeder" [ref=f18e277] [cursor=pointer]:
+                    - /url: /PFORMSatox/satoxcoin-seeder
+                  - button "Switch repository (alt shift r)" [ref=f18e278] [cursor=pointer]
+            - button "Search or jump to… (forward slash)" [ref=f18e29] [cursor=pointer]
+          - generic [ref=f18e32]:
+            - generic [ref=f18e33]:
+              - generic [ref=f18e36]:
+                - link "Chat with Copilot" [ref=f18e38] [cursor=pointer]:
+                  - /url: /copilot
+                - button "Open Copilot…" [ref=f18e43] [cursor=pointer]
+              - button "Create new..." [ref=f18e45] [cursor=pointer]
+              - generic [ref=f18e47]:
+                - link "All issues" [ref=f18e48] [cursor=pointer]:
+                  - /url: /issues
+                - link "All pull requests" [ref=f18e52] [cursor=pointer]:
+                  - /url: /pulls
+                - link "All repositories" [ref=f18e55] [cursor=pointer]:
+                  - /url: /repos
+            - link "You have unread notifications (g then n)" [ref=f18e58] [cursor=pointer]:
+              - /url: /notifications
+            - button "Open user navigation menu" [ref=f18e62] [cursor=pointer]:
+              - img "pform" [ref=f18e63]
+        - heading "Repository navigation" [level=2] [ref=f18e64]
+        - navigation "Repository" [ref=f18e65]:
+          - list [ref=f18e66]:
+            - listitem [ref=f18e67]:
+              - link "Code" [ref=f18e68] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder
+            - listitem [ref=f18e70]:
+              - link "Issues" [ref=f18e71] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/issues
+            - listitem [ref=f18e73]:
+              - link "Pull requests (1)" [ref=f18e74] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/pulls
+                - generic [ref=f18e75]: Pull requests
+                - generic [ref=f18e76]:
+                  - generic [ref=f18e77]: "1"
+                  - generic [ref=f18e78]: (1)
+            - listitem [ref=f18e79]:
+              - link "Agents" [ref=f18e80] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/agents?author=PFORMSatox
+            - listitem [ref=f18e82]:
+              - link "Actions" [ref=f18e83] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/actions
+            - listitem [ref=f18e85]:
+              - link "Projects" [ref=f18e86] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/projects
+            - listitem [ref=f18e88]:
+              - link "Security and quality" [ref=f18e89] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/security
+            - listitem [ref=f18e91]:
+              - link "Insights" [ref=f18e92] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/pulse
+            - listitem [ref=f18e94]:
+              - link "Settings" [ref=f18e95] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/settings
+    - main [ref=f18e108]:
+      - generic [ref=f18e393]:
+        - generic [ref=f18e397]:
+          - 'heading "build(deps): bump the rust-deps group with 3 updates #1 Edit title" [level=1] [ref=f18e399]':
+            - text: "build(deps): bump the rust-deps group with 3 updates"
+            - generic [ref=f18e400]:
+              - generic [ref=f18e401]: "#1"
+              - button "Edit title" [ref=f18e402] [cursor=pointer]
+          - generic [ref=f18e406]:
+            - generic [ref=f18e407]:
+              - button "View status View status" [disabled] [ref=f18e408]:
+                - generic [ref=f18e409]: Loading
+              - generic [ref=f18e410]: Loading merge status
+            - button "Code" [ref=f18e412] [cursor=pointer]
+          - generic [ref=f18e416]:
+            - generic [ref=f18e418]:
+              - img "Pull request" [ref=f18e419]
+              - text: Open
+            - generic [ref=f18e422]:
+              - link "dependabot[bot]" [ref=f18e423] [cursor=pointer]:
+                - /url: /dependabot[bot]
+              - text: wants to merge 1 commit into
+              - generic [ref=f18e424]:
+                - link "main" [ref=f18e425] [cursor=pointer]:
+                  - /url: /PFORMSatox/satoxcoin-seeder/tree/main
+                - generic [ref=f18e426]: from
+                - generic [ref=f18e427]:
+                  - link "dependabot/cargo/rust-deps-5564db359d" [ref=f18e428] [cursor=pointer]:
+                    - /url: /PFORMSatox/satoxcoin-seeder/tree/dependabot/cargo/rust-deps-5564db359d
+                  - button "Copy head branch name to clipboard" [ref=f18e429] [cursor=pointer]
+          - generic [ref=f18e433]:
+            - generic [ref=f18e435]:
+              - generic [ref=f18e436]: "+379"
+              - generic [ref=f18e437]: "-229"
+              - generic [ref=f18e438]: "Lines changed: 379 additions & 229 deletions"
+            - navigation "Pull request navigation tabs" [ref=f18e447]:
+              - tablist [ref=f18e448]:
+                - tab "Conversation (1)" [selected] [ref=f18e449] [cursor=pointer]:
+                  - text: Conversation
+                  - generic [ref=f18e452]: "1"
+                  - generic [ref=f18e453]: (1)
+                - tab "Commits (1)" [ref=f18e454] [cursor=pointer]:
+                  - text: Commits
+                  - generic [ref=f18e457]: "1"
+                  - generic [ref=f18e458]: (1)
+                - tab "Checks (6)" [ref=f18e459] [cursor=pointer]:
+                  - text: Checks
+                  - generic [ref=f18e462]: "6"
+                  - generic [ref=f18e463]: (6)
+                - tab "Files changed (4)" [ref=f18e464] [cursor=pointer]:
+                  - text: Files changed
+                  - generic [ref=f18e467]: "4"
+                  - generic [ref=f18e468]: (4)
+        - generic [ref=f18e473]:
+          - generic [ref=f18e475]:
+            - heading "Conversation" [level=2] [ref=f18e476]
+            - generic [ref=f18e477]:
+              - generic [ref=f18e478]:
+                - generic [ref=f18e480]:
+                  - link [ref=f18e481] [cursor=pointer]:
+                    - /url: /apps/dependabot
+                    - img "@dependabot" [ref=f18e482]
+                  - generic [ref=f18e484]:
+                    - generic [ref=f18e485]:
+                      - heading "dependabot Bot commented on behalf of github Jul 24, 20268 minutes ago" [level=3] [ref=f18e486]:
+                        - generic [ref=f18e487]:
+                          - strong [ref=f18e488]:
+                            - link "dependabot" [ref=f18e489] [cursor=pointer]:
+                              - /url: /apps/dependabot
+                            - generic [ref=f18e490]: Bot
+                          - text: commented on behalf of
+                          - strong [ref=f18e491]: github
+                          - link "Jul 24, 20268 minutes ago" [ref=f18e492] [cursor=pointer]:
+                            - /url: "#issue-4963559470"
+                      - group [ref=f18e495]:
+                        - button [ref=f18e496] [cursor=pointer]:
+                          - img "Show options" [ref=f18e499]
+                    - generic [ref=f18e504]:
+                      - paragraph [ref=f18e505]:
+                        - text: "Bumps the rust-deps group with 3 updates:"
+                        - link "reqwest" [ref=f18e506] [cursor=pointer]:
+                          - /url: https://github.com/seanmonstar/reqwest
+                        - text: ","
+                        - link "sha2" [ref=f18e507] [cursor=pointer]:
+                          - /url: https://github.com/RustCrypto/hashes
+                        - text: and
+                        - link "rand" [ref=f18e508] [cursor=pointer]:
+                          - /url: https://github.com/rust-random/rand
+                        - text: .
+                      - paragraph [ref=f18e509]:
+                        - text: Updates
+                        - code [ref=f18e510]: reqwest
+                        - text: from 0.12.28 to 0.13.4
+                      - group [ref=f18e511]:
+                        - generic "Release notes" [ref=f18e512] [cursor=pointer]
+                      - group [ref=f18e513]:
+                        - generic "Changelog" [ref=f18e514] [cursor=pointer]
+                      - group [ref=f18e515]:
+                        - generic "Commits" [ref=f18e516] [cursor=pointer]
+                      - paragraph [ref=f18e517]:
+                        - text: Updates
+                        - code [ref=f18e518]: sha2
+                        - text: from 0.10.9 to 0.11.0
+                      - group [ref=f18e519]:
+                        - generic "Commits" [ref=f18e520] [cursor=pointer]
+                      - paragraph [ref=f18e521]:
+                        - text: Updates
+                        - code [ref=f18e522]: rand
+                        - text: from 0.8.7 to 0.10.2
+                      - group [ref=f18e523]:
+                        - generic "Changelog" [ref=f18e524] [cursor=pointer]
+                      - group [ref=f18e525]:
+                        - generic "Commits" [ref=f18e526] [cursor=pointer]
+                      - paragraph [ref=f18e527]:
+                        - text: Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting
+                        - code [ref=f18e528]: "@dependabot rebase"
+                        - text: .
+                      - separator [ref=f18e529]
+                      - group [ref=f18e530]:
+                        - generic "Dependabot commands and options" [ref=f18e531] [cursor=pointer]
+                    - group [ref=f18e535]:
+                      - generic "Add or remove reactions" [ref=f18e536] [cursor=pointer]
+                - generic [ref=f18e539]:
+                  - generic [ref=f18e550]:
+                    - link [ref=f18e553] [cursor=pointer]:
+                      - /url: /apps/dependabot
+                      - img "@dependabot" [ref=f18e554]
+                    - generic [ref=f18e555]:
+                      - code [ref=f18e556]:
+                        - 'link "build(deps): bump the rust-deps group with 3 updates" [ref=f18e557] [cursor=pointer]':
+                          - /url: /PFORMSatox/satoxcoin-seeder/pull/1/commits/1685b1029dea0d1b172e70367dab9f2adfe41958
+                      - button "Commit message body" [ref=f18e559] [cursor=pointer]: …
+                    - button "Verified" [ref=f18e561] [cursor=pointer]
+                    - group [ref=f18e566]:
+                      - img "0 / 6 checks OK" [ref=f18e568] [cursor=pointer]
+                    - code [ref=f18e571]:
+                      - link "1685b10" [ref=f18e572] [cursor=pointer]:
+                        - /url: /PFORMSatox/satoxcoin-seeder/pull/1/commits/1685b1029dea0d1b172e70367dab9f2adfe41958
+                  - generic [ref=f18e574]:
+                    - generic [ref=f18e575]:
+                      - link [ref=f18e576] [cursor=pointer]:
+                        - /url: /apps/dependabot
+                        - img "@dependabot" [ref=f18e577]
+                      - img "@github" [ref=f18e578]
+                    - generic [ref=f18e580]:
+                      - generic [ref=f18e581]:
+                        - heading "dependabot Bot commented on behalf of github Jul 24, 20268 minutes ago" [level=3] [ref=f18e582]:
+                          - generic [ref=f18e583]:
+                            - strong [ref=f18e584]:
+                              - link "dependabot" [ref=f18e585] [cursor=pointer]:
+                                - /url: /apps/dependabot
+                              - generic [ref=f18e586]: Bot
+                            - text: commented on behalf of
+                            - strong [ref=f18e587]: github
+                            - link "Jul 24, 20268 minutes ago" [ref=f18e588] [cursor=pointer]:
+                              - /url: "#issuecomment-5064337460"
+                        - generic [ref=f18e589]:
+                          - group [ref=f18e591]:
+                            - button [ref=f18e592] [cursor=pointer]:
+                              - img "Show options" [ref=f18e595]
+                          - generic "This user is the author of this pull request." [ref=f18e598]: Author
+                      - generic [ref=f18e600]:
+                        - table [ref=f18e602]:
+                          - rowgroup [ref=f18e603]:
+                            - row [ref=f18e604]:
+                              - cell [ref=f18e605]:
+                                - heading "Labels" [level=3] [ref=f18e606]
+                                - paragraph [ref=f18e607]:
+                                  - text: "The following labels could not be found:"
+                                  - code [ref=f18e608]: dependencies
+                                  - text: . Please create it before Dependabot can add it to a pull request.
+                                - paragraph [ref=f18e609]:
+                                  - text: Please fix the above issues or remove invalid values from
+                                  - code [ref=f18e610]: dependabot.yml
+                                  - text: .
+                        - group [ref=f18e615]:
+                          - generic "Add or remove reactions" [ref=f18e616] [cursor=pointer]
+              - generic [ref=f18e620]: Loading
+              - generic [ref=f18e629]:
+                - link [ref=f18e631] [cursor=pointer]:
+                  - /url: /PFORMSatox
+                  - img "@PFORMSatox" [ref=f18e632]
+                - form [ref=f18e634]:
+                  - group [ref=f18e635]:
+                    - heading "Add a comment" [level=4] [ref=f18e638]
+                    - generic [ref=f18e639]: Comment
+                    - generic [ref=f18e640]:
+                      - generic [ref=f18e641]:
+                        - tablist "Add a comment" [ref=f18e642]:
+                          - tab "Write" [selected] [ref=f18e643] [cursor=pointer]
+                          - tab "Preview" [ref=f18e644] [cursor=pointer]
+                        - toolbar [ref=f18e645]:
+                          - generic [ref=f18e646]:
+                            - button "Heading" [ref=f18e648] [cursor=pointer]
+                            - button "Bold" [ref=f18e650] [cursor=pointer]
+                            - button "Italic" [ref=f18e652] [cursor=pointer]
+                            - button "Quote" [ref=f18e654] [cursor=pointer]
+                            - button "Code" [ref=f18e656] [cursor=pointer]
+                            - button "Link" [ref=f18e658] [cursor=pointer]
+                            - separator [ref=f18e659]
+                            - button "Numbered list" [ref=f18e661] [cursor=pointer]
+                            - button "Unordered list" [ref=f18e663] [cursor=pointer]
+                            - button "Task list" [ref=f18e665] [cursor=pointer]
+                            - separator [ref=f18e666]
+                            - button "Attach files" [ref=f18e668] [cursor=pointer]
+                          - button "Menu" [ref=f18e671] [cursor=pointer]
+                      - tabpanel "Write" [ref=f18e672]:
+                        - generic [ref=f18e676]:
+                          - textbox "Comment" [ref=f18e677]:
+                            - /placeholder: " "
+                          - paragraph: Add your comment here...
+                        - generic [ref=f18e678]:
+                          - link "Markdown is supported" [ref=f18e680] [cursor=pointer]:
+                            - /url: https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+                          - button "Paste, drop, or click to add files" [ref=f18e683] [cursor=pointer]
+                  - generic [ref=f18e688]:
+                    - button "Close pull request" [ref=f18e690] [cursor=pointer]
+                    - button "Comment" [disabled] [ref=f18e694]
+                - generic [ref=f18e698]:
+                  - text: Remember, contributions to this repository should follow our
+                  - link "GitHub Community Guidelines" [ref=f18e699] [cursor=pointer]:
+                    - /url: https://docs.github.com/articles/github-community-guidelines
+                  - text: .
+                - generic [ref=f18e700]:
+                  - strong [ref=f18e703]: ProTip!
+                  - text: Add comments to specific lines under
+                  - link "Files changed" [ref=f18e704] [cursor=pointer]:
+                    - /url: /PFORMSatox/satoxcoin-seeder/pull/1/files
+                  - text: .
+          - generic [ref=f18e708]:
+            - form "Select reviewers" [ref=f18e710]:
+              - group [ref=f18e711]:
+                - button "Reviewers" [ref=f18e712] [cursor=pointer]
+              - generic [ref=f18e715]: Loading suggestions…
+              - generic [ref=f18e717]:
+                - generic [ref=f18e718]: Still in progress?
+                - group [ref=f18e719]:
+                  - button "Convert to draft" [ref=f18e720] [cursor=pointer]
+            - form "Select assignees" [ref=f18e722]:
+              - group [ref=f18e723]:
+                - button "Assignees" [ref=f18e724] [cursor=pointer]
+              - generic [ref=f18e727]:
+                - text: No one—
+                - button "assign yourself" [ref=f18e728] [cursor=pointer]
+            - generic [ref=f18e729]:
+              - group [ref=f18e730]:
+                - button "Labels" [ref=f18e731] [cursor=pointer]
+              - generic [ref=f18e734]: None yet
+            - form "Select projects" [ref=f18e736]:
+              - group [ref=f18e737]:
+                - button "Projects" [ref=f18e738] [cursor=pointer]
+              - text: None yet
+            - form "Select milestones" [ref=f18e742]:
+              - group [ref=f18e743]:
+                - button "Milestone" [ref=f18e744] [cursor=pointer]
+              - text: No milestone
+            - form "Link issues" [ref=f18e752]:
+              - group [ref=f18e753]:
+                - button "Development" [ref=f18e754] [cursor=pointer]
+              - paragraph [ref=f18e757]: Successfully merging this pull request may close these issues.
+              - paragraph [ref=f18e759]: None yet
+            - generic [ref=f18e761]:
+              - button "Notifications Customize" [ref=f18e764] [cursor=pointer]:
+                - generic [ref=f18e765]:
+                  - generic [ref=f18e766]: Notifications
+                  - generic [ref=f18e767]: Customize
+              - button "Subscribe" [ref=f18e769] [cursor=pointer]
+              - paragraph [ref=f18e772]: You’re not receiving notifications from this thread.
+            - heading "0 participants" [level=3] [ref=f18e775]
+            - group [ref=f18e777]:
+              - button [ref=f18e778] [cursor=pointer]:
+                - strong [ref=f18e781]: Lock conversation
+    - contentinfo [ref=f18e238]:
+      - heading "Footer" [level=2] [ref=f18e239]
+      - generic [ref=f18e240]:
+        - generic [ref=f18e241]:
+          - link "GitHub Homepage" [ref=f18e242] [cursor=pointer]:
+            - /url: https://github.com
+          - generic [ref=f18e245]: © 2026 GitHub, Inc.
+        - navigation "Footer" [ref=f18e246]:
+          - heading "Footer navigation" [level=3] [ref=f18e247]
+          - list "Footer navigation" [ref=f18e248]:
+            - listitem [ref=f18e249]:
+              - link "Terms" [ref=f18e250] [cursor=pointer]:
+                - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+            - listitem [ref=f18e251]:
+              - link "Privacy" [ref=f18e252] [cursor=pointer]:
+                - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+            - listitem [ref=f18e253]:
+              - link "Security" [ref=f18e254] [cursor=pointer]:
+                - /url: https://github.com/security
+            - listitem [ref=f18e255]:
+              - link "Status" [ref=f18e256] [cursor=pointer]:
+                - /url: https://www.githubstatus.com/
+            - listitem [ref=f18e257]:
+              - link "Community" [ref=f18e258] [cursor=pointer]:
+                - /url: https://github.community/
+            - listitem [ref=f18e259]:
+              - link "Docs" [ref=f18e260] [cursor=pointer]:
+                - /url: https://docs.github.com/
+            - listitem [ref=f18e261]:
+              - link "Contact" [ref=f18e262] [cursor=pointer]:
+                - /url: https://support.github.com?tags=dotcom-footer
+            - listitem [ref=f18e263]:
+              - button "Manage cookies" [ref=f18e265] [cursor=pointer]
+            - listitem [ref=f18e266]:
+              - button "Do not share my personal information" [ref=f18e268] [cursor=pointer]
+  - alert [ref=f18e388]

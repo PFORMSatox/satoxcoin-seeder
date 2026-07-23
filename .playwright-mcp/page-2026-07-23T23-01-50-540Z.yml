@@ -1,0 +1,321 @@
+- generic [active] [ref=f16e1]:
+  - generic [ref=f16e2]:
+    - generic [ref=f16e3]:
+      - link "Skip to content" [ref=f16e4] [cursor=pointer]:
+        - /url: "#start-of-content"
+      - banner "Global navigation menu" [ref=f16e8]:
+        - generic [ref=f16e9]:
+          - generic [ref=f16e10]:
+            - button "Open menu" [ref=f16e12] [cursor=pointer]
+            - link "Homepage (g then d)" [ref=f16e15] [cursor=pointer]:
+              - /url: /
+          - generic [ref=f16e18]:
+            - navigation "Breadcrumbs" [ref=f16e19]:
+              - list [ref=f16e20]:
+                - listitem [ref=f16e21]:
+                  - link "PFORMSatox" [ref=f16e22] [cursor=pointer]:
+                    - /url: /PFORMSatox
+                - listitem [ref=f16e24]:
+                  - link "satoxcoin-seeder" [ref=f16e25] [cursor=pointer]:
+                    - /url: /PFORMSatox/satoxcoin-seeder
+                  - button "Switch repository (alt shift r)" [ref=f16e26] [cursor=pointer]
+            - button "Search or jump to…" [ref=f16e1301] [cursor=pointer]:
+              - generic [ref=f16e1303]:
+                - generic:
+                  - text: Type
+                  - generic: /
+                  - text: to search
+          - generic [ref=f16e32]:
+            - generic [ref=f16e33]:
+              - generic [ref=f16e36]:
+                - link "Chat with Copilot" [ref=f16e38] [cursor=pointer]:
+                  - /url: /copilot
+                - button "Open Copilot…" [ref=f16e43] [cursor=pointer]
+              - button "Create new..." [ref=f16e45] [cursor=pointer]
+              - generic [ref=f16e47]:
+                - link "All issues" [ref=f16e48] [cursor=pointer]:
+                  - /url: /issues
+                - link "All pull requests" [ref=f16e52] [cursor=pointer]:
+                  - /url: /pulls
+                - link "All repositories" [ref=f16e55] [cursor=pointer]:
+                  - /url: /repos
+            - link "You have unread notifications (g then n)" [ref=f16e760] [cursor=pointer]:
+              - /url: /notifications
+            - button "Open user navigation menu" [ref=f16e62] [cursor=pointer]:
+              - img "pform" [ref=f16e63]
+        - heading "Repository navigation" [level=2] [ref=f16e64]
+        - navigation "Repository" [ref=f16e65]:
+          - list [ref=f16e66]:
+            - listitem [ref=f16e67]:
+              - link "Code" [ref=f16e68] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder
+            - listitem [ref=f16e70]:
+              - link "Issues" [ref=f16e71] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/issues
+            - listitem [ref=f16e73]:
+              - link "Pull requests (1)" [ref=f16e74] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/pulls
+                - generic [ref=f16e75]: Pull requests
+                - generic [ref=f16e76]:
+                  - generic [ref=f16e77]: "1"
+                  - generic [ref=f16e78]: (1)
+            - listitem [ref=f16e79]:
+              - link "Agents" [ref=f16e80] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/agents?author=PFORMSatox
+            - listitem [ref=f16e82]:
+              - link "Actions" [ref=f16e83] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/actions
+            - listitem [ref=f16e85]:
+              - link "Projects" [ref=f16e86] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/projects
+            - listitem [ref=f16e88]:
+              - link "Security and quality" [ref=f16e89] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/security
+            - listitem [ref=f16e91]:
+              - link "Insights" [ref=f16e92] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/pulse
+            - listitem [ref=f16e94]:
+              - link "Settings" [ref=f16e95] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/settings
+    - main [ref=f16e100]:
+      - generic [ref=f16e101]:
+        - 'heading "Settings: PFORMSatox/satoxcoin-seeder" [level=1] [ref=f16e1304]'
+        - generic [ref=f16e1306]:
+          - navigation "General settings" [ref=f16e1309]:
+            - list [ref=f16e1311]:
+              - listitem [ref=f16e1312]:
+                - link "General" [ref=f16e1313] [cursor=pointer]:
+                  - /url: /PFORMSatox/satoxcoin-seeder/settings
+              - listitem [ref=f16e1315]
+              - listitem [ref=f16e1316]:
+                - generic [ref=f16e1319]:
+                  - heading "Access" [level=2] [ref=f16e1321]
+                  - list "Access" [ref=f16e1322]:
+                    - listitem [ref=f16e1323]:
+                      - link "Collaborators" [ref=f16e1324] [cursor=pointer]:
+                        - /url: /PFORMSatox/satoxcoin-seeder/settings/access
+                    - listitem [ref=f16e1326]:
+                      - button "Moderation options" [ref=f16e1327] [cursor=pointer]
+              - listitem [ref=f16e1329]
+              - listitem [ref=f16e1330]:
+                - generic [ref=f16e1333]:
+                  - heading "Code, planning, and automation" [level=2] [ref=f16e1335]
+                  - list "Code, planning, and automation" [ref=f16e1336]:
+                    - listitem [ref=f16e1337]:
+                      - link "Branches" [ref=f16e1338] [cursor=pointer]:
+                        - /url: /PFORMSatox/satoxcoin-seeder/settings/branches
+                    - listitem [ref=f16e1340]:
+                      - link "Tags" [ref=f16e1341] [cursor=pointer]:
+                        - /url: /PFORMSatox/satoxcoin-seeder/settings/tag_protection
+                    - listitem [ref=f16e1343]:
+                      - button "Rules" [ref=f16e1344] [cursor=pointer]
+                    - listitem [ref=f16e1346]:
+                      - button "Actions" [ref=f16e1347] [cursor=pointer]
+                    - listitem [ref=f16e1349]:
+                      - link "Webhooks" [ref=f16e1350] [cursor=pointer]:
+                        - /url: /PFORMSatox/satoxcoin-seeder/settings/hooks
+                    - listitem [ref=f16e1352]:
+                      - button "Copilot" [ref=f16e1353] [cursor=pointer]
+                    - listitem [ref=f16e1355]:
+                      - button "Planning" [ref=f16e1356] [cursor=pointer]
+                    - listitem [ref=f16e1358]:
+                      - link "Environments" [ref=f16e1359] [cursor=pointer]:
+                        - /url: /PFORMSatox/satoxcoin-seeder/settings/environments
+                    - listitem [ref=f16e1361]:
+                      - link "Codespaces" [ref=f16e1362] [cursor=pointer]:
+                        - /url: /PFORMSatox/satoxcoin-seeder/settings/codespaces
+                    - listitem [ref=f16e1364]:
+                      - link "Pages" [ref=f16e1365] [cursor=pointer]:
+                        - /url: /PFORMSatox/satoxcoin-seeder/settings/pages
+              - listitem [ref=f16e1367]
+              - listitem [ref=f16e1368]:
+                - generic [ref=f16e1371]:
+                  - heading "Security and quality" [level=2] [ref=f16e1373]
+                  - list "Security and quality" [ref=f16e1374]:
+                    - listitem [ref=f16e1375] [cursor=pointer]:
+                      - link "Advanced Security" [ref=f16e1376]:
+                        - /url: /PFORMSatox/satoxcoin-seeder/settings/security_analysis
+                    - listitem [ref=f16e1378]:
+                      - link "Deploy keys" [ref=f16e1379] [cursor=pointer]:
+                        - /url: /PFORMSatox/satoxcoin-seeder/settings/keys
+                    - listitem [ref=f16e1381]:
+                      - button "Secrets and variables" [ref=f16e1382] [cursor=pointer]
+              - listitem [ref=f16e1384]
+              - listitem [ref=f16e1385]:
+                - generic [ref=f16e1388]:
+                  - heading "Integrations" [level=2] [ref=f16e1390]
+                  - list "Integrations" [ref=f16e1391]:
+                    - listitem [ref=f16e1392]:
+                      - link "GitHub Apps" [ref=f16e1393] [cursor=pointer]:
+                        - /url: /PFORMSatox/satoxcoin-seeder/settings/installations
+                    - listitem [ref=f16e1395]:
+                      - link "Email notifications" [ref=f16e1396] [cursor=pointer]:
+                        - /url: /PFORMSatox/satoxcoin-seeder/settings/notifications
+          - generic [ref=f16e1399]:
+            - heading "Advanced Security" [level=2] [ref=f16e1401]
+            - paragraph [ref=f16e1402]: Advanced Security features help keep your repository secure and updated. By enabling these features, you're granting us permission to perform read-only analysis on your repository.
+            - generic [ref=f16e1404]:
+              - generic [ref=f16e1405]:
+                - heading "Private vulnerability reporting" [level=3] [ref=f16e1406]
+                - paragraph [ref=f16e1407]:
+                  - text: Allow your community to privately report potential security vulnerabilities to maintainers and repository owners.
+                  - link "Learn more about private vulnerability reporting" [ref=f16e1408] [cursor=pointer]:
+                    - /url: https://docs.github.com/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability
+                  - text: .
+              - button "Disable private vulnerability reporting" [ref=f16e1412] [cursor=pointer]:
+                - generic [ref=f16e1413]: Disable
+            - generic [ref=f16e1417]:
+              - generic [ref=f16e1418]:
+                - heading "Dependency graph" [level=3] [ref=f16e1419]
+                - paragraph [ref=f16e1420]: Understand your dependencies.
+              - button "Enable dependency graph" [ref=f16e1424] [cursor=pointer]:
+                - generic [ref=f16e1425]: Enable
+            - generic [ref=f16e1428]:
+              - heading "Dependabot" [level=3] [ref=f16e1429]
+              - paragraph [ref=f16e1430]:
+                - text: Keep your dependencies secure and up-to-date.
+                - link "Learn more about Dependabot" [ref=f16e1431] [cursor=pointer]:
+                  - /url: https://docs.github.com/code-security/supply-chain-security/understanding-your-software-supply-chain/about-supply-chain-security#what-is-dependabot
+                - text: .
+            - generic [ref=f16e1434]:
+              - generic [ref=f16e1435]:
+                - heading "Dependabot alerts" [level=4] [ref=f16e1436]
+                - paragraph [ref=f16e1437]:
+                  - text: Receive alerts for vulnerabilities that affect your dependencies and manually generate Dependabot pull requests to resolve these vulnerabilities.
+                  - link "Configure alert notifications" [ref=f16e1438] [cursor=pointer]:
+                    - /url: /settings/notifications#vulnerability-alerts-heading
+                  - text: .
+              - button "Enable Dependabot alerts" [ref=f16e1442] [cursor=pointer]:
+                - generic [ref=f16e1443]: Enable
+            - generic [ref=f16e1446]:
+              - generic [ref=f16e1447]:
+                - heading "Dependabot security updates" [level=4] [ref=f16e1448]
+                - paragraph [ref=f16e1449]: Enabling this option will result in Dependabot automatically attempting to open pull requests to resolve every open Dependabot alert with an available patch.
+              - button "Enable Dependabot security updates" [ref=f16e1453] [cursor=pointer]:
+                - generic [ref=f16e1454]: Enable
+            - generic [ref=f16e1457]:
+              - generic [ref=f16e1458]:
+                - heading "Grouped security updates" [level=4] [ref=f16e1459]
+                - paragraph [ref=f16e1460]:
+                  - text: Groups all available updates that resolve a Dependabot alert into one pull request (per package manager and directory of requirement manifests). This option may be overridden by group rules specified in dependabot.yml -
+                  - link "Learn how to group updates." [ref=f16e1461] [cursor=pointer]:
+                    - /url: https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#groups
+              - button "Enable Dependabot grouped security updates" [ref=f16e1465] [cursor=pointer]:
+                - generic [ref=f16e1466]: Enable
+            - generic [ref=f16e1469]:
+              - generic [ref=f16e1470]:
+                - heading "Dependabot version updates" [level=4] [ref=f16e1471]
+                - paragraph [ref=f16e1472]:
+                  - text: Allow Dependabot to open pull requests automatically to keep your dependencies up-to-date when new versions are available.
+                  - link "Learn more about configuring a dependabot.yml file" [ref=f16e1473] [cursor=pointer]:
+                    - /url: https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuring-dependabot-version-updates
+                  - text: .
+              - link "Configure Dependabot version updates" [ref=f16e1476] [cursor=pointer]:
+                - /url: /PFORMSatox/satoxcoin-seeder/edit/main/.github/dependabot.yml
+                - generic [ref=f16e1477]: Configure
+            - generic [ref=f16e1480]:
+              - heading "Code scanning" [level=3] [ref=f16e1481]
+              - paragraph [ref=f16e1482]: Automatically detect common vulnerabilities and coding errors.
+              - generic [ref=f16e1483]:
+                - generic:
+                  - heading "Tools" [level=4] [ref=f16e1484]
+                  - generic [ref=f16e1486]:
+                    - generic [ref=f16e1488]:
+                      - generic [ref=f16e1489]:
+                        - heading "CodeQL analysis" [level=5] [ref=f16e1490]
+                        - paragraph [ref=f16e1491]:
+                          - text: Identify vulnerabilities and errors with
+                          - link "CodeQL" [ref=f16e1492] [cursor=pointer]:
+                            - /url: https://docs.github.com/code-security/code-scanning/introduction-to-code-scanning/about-code-scanning-with-codeql
+                          - text: for
+                          - link "eligible" [ref=f16e1493] [cursor=pointer]:
+                            - /url: https://docs.github.com/code-security/code-scanning/enabling-code-scanning/configuring-default-setup-for-code-scanning-at-scale#eligible-repositories-for-codeql-default-setup-at-scale
+                          - text: repositories.
+                      - generic [ref=f16e1494]: Loading
+                    - generic [ref=f16e1501]:
+                      - generic [ref=f16e1502]:
+                        - heading "Other tools" [level=5] [ref=f16e1503]
+                        - paragraph [ref=f16e1504]: Add any third-party code scanning tool.
+                      - link "Explore workflows" [ref=f16e1506] [cursor=pointer]:
+                        - /url: /PFORMSatox/satoxcoin-seeder/actions/new?category=security&query=code+scanning
+              - generic [ref=f16e1509]:
+                - generic [ref=f16e1511]:
+                  - generic [ref=f16e1512]:
+                    - heading "Copilot Autofix" [level=5] [ref=f16e1513]
+                    - paragraph [ref=f16e1514]:
+                      - text: Suggest fixes for CodeQL alerts using AI. CodeQL default or advanced setup must be enabled for this feature to work. Learn more about the
+                      - link "limitations of autofix code suggestions" [ref=f16e1515] [cursor=pointer]:
+                        - /url: https://docs.github.com/code-security/code-scanning/managing-code-scanning-alerts/about-autofix-for-codeql-code-scanning#limitations-of-suggestions
+                  - generic [ref=f16e1517]:
+                    - generic [ref=f16e1518]: "On"
+                    - button "Copilot Autofix enablement" [pressed] [ref=f16e1520] [cursor=pointer]
+                - generic [ref=f16e1530]:
+                  - generic [ref=f16e1531]:
+                    - heading "AI findings Preview" [level=5] [ref=f16e1532]:
+                      - text: AI findings
+                      - generic [ref=f16e1533]: Preview
+                    - paragraph [ref=f16e1534]:
+                      - text: Generate security findings for non-CodeQL languages using AI. CodeQL default setup must be enabled for this feature to work. Learn more
+                      - link "about AI findings" [ref=f16e1535] [cursor=pointer]:
+                        - /url: https://docs.github.com/code-security/concepts/code-scanning/ai-powered-security-detections
+                      - text: .
+                  - generic [ref=f16e1537]:
+                    - generic [ref=f16e1538]: "Off"
+                    - button "AI Findings enablement" [ref=f16e1540] [cursor=pointer]
+              - heading "Protection rules" [level=4] [ref=f16e1549]
+              - generic [ref=f16e1553]:
+                - generic [ref=f16e1554]:
+                  - heading "Check runs failure threshold" [level=5] [ref=f16e1555]
+                  - paragraph [ref=f16e1556]:
+                    - text: Select the alert severity level for code scanning check runs to fail.
+                    - link "Create a branch ruleset" [ref=f16e1557] [cursor=pointer]:
+                      - /url: /PFORMSatox/satoxcoin-seeder/settings/rules/new?enforcement=disabled&target=branch
+                    - text: to prevent a branch from merging when these checks fail.
+                - generic [ref=f16e1558]:
+                  - 'button "Security alert severity level: High or higher" [ref=f16e1561] [cursor=pointer]'
+                  - 'button "Standard alert severity level: Only errors" [ref=f16e1566] [cursor=pointer]'
+            - generic [ref=f16e1569]:
+              - generic [ref=f16e1570]:
+                - heading "Secret Protection" [level=3] [ref=f16e1571]
+                - paragraph [ref=f16e1572]:
+                  - text: GitHub will always send alerts to partners for detected secrets in public repositories.
+                  - link "Learn more about partner patterns" [ref=f16e1573] [cursor=pointer]:
+                    - /url: https://docs.github.com/enterprise-cloud@latest/code-security/secret-scanning/about-secret-scanning#about-secret-scanning-for-partner-patterns
+                  - text: .
+              - button "Enable" [ref=f16e1576] [cursor=pointer]
+    - contentinfo [ref=f16e726]:
+      - heading "Footer" [level=2] [ref=f16e727]
+      - generic [ref=f16e728]:
+        - generic [ref=f16e729]:
+          - link "GitHub Homepage" [ref=f16e730] [cursor=pointer]:
+            - /url: https://github.com
+          - generic [ref=f16e733]: © 2026 GitHub, Inc.
+        - navigation "Footer" [ref=f16e734]:
+          - heading "Footer navigation" [level=3] [ref=f16e735]
+          - list "Footer navigation" [ref=f16e736]:
+            - listitem [ref=f16e737]:
+              - link "Terms" [ref=f16e738] [cursor=pointer]:
+                - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+            - listitem [ref=f16e739]:
+              - link "Privacy" [ref=f16e740] [cursor=pointer]:
+                - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+            - listitem [ref=f16e741]:
+              - link "Security" [ref=f16e742] [cursor=pointer]:
+                - /url: https://github.com/security
+            - listitem [ref=f16e743]:
+              - link "Status" [ref=f16e744] [cursor=pointer]:
+                - /url: https://www.githubstatus.com/
+            - listitem [ref=f16e745]:
+              - link "Community" [ref=f16e746] [cursor=pointer]:
+                - /url: https://github.community/
+            - listitem [ref=f16e747]:
+              - link "Docs" [ref=f16e748] [cursor=pointer]:
+                - /url: https://docs.github.com/
+            - listitem [ref=f16e749]:
+              - link "Contact" [ref=f16e750] [cursor=pointer]:
+                - /url: https://support.github.com?tags=dotcom-footer
+            - listitem [ref=f16e751]:
+              - button "Manage cookies" [ref=f16e753] [cursor=pointer]
+            - listitem [ref=f16e754]:
+              - button "Do not share my personal information" [ref=f16e756] [cursor=pointer]
+  - alert [ref=f16e759]

@@ -361,7 +361,7 @@ impl AddrDb {
             return None;
         }
         for _ in 0..tot {
-            let rnd = rand::random::<usize>() % tot;
+            let rnd = (rand::random::<u64>() as usize) % tot;
             let ret = if rnd < self.unk_id.len() {
                 let it = *self.unk_id.iter().last()?;
                 self.unk_id.remove(&it);
@@ -510,7 +510,7 @@ impl AddrDb {
         let count = std::cmp::min(max.max(1), filtered.len() / 2);
         let mut ids = HashSet::new();
         while ids.len() < count {
-            ids.insert(filtered[rand::random::<usize>() % filtered.len()]);
+            ids.insert(filtered[(rand::random::<u64>() as usize) % filtered.len()]);
         }
         for &id in &ids {
             if let Some(info) = self.id_to_info.get(&id) {
