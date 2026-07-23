@@ -1,5 +1,6 @@
 use std::collections::HashMap;
 use std::sync::Mutex;
+use url::Url;
 
 use serde::{Deserialize, Serialize};
 
@@ -81,10 +82,14 @@ impl CloudflareSeeder {
             return Ok(id.clone());
         }
 
+        let url = Url::parse_with_params(
+            "https://api.cloudflare.com/client/v4/zones",
+            &[("name", &self.domain)],
+        )
+        .map_err(|e| Error::Api(format!("url: {e}")))?;
         let resp: CfResponse<HashMap<String, serde_json::Value>> = self
             .client
-            .get("https://api.cloudflare.com/client/v4/zones")
-            .query(&[("name", &self.domain)])
+            .get(url)
             .header("Authorization", format!("Bearer {}", self.api_token))
             .header("Content-Type", "application/json")
             .send()
@@ -123,17 +128,21 @@ impl CloudflareSeeder {
         let mut all_records = Vec::new();
         loop {
             page += 1;
+            let url = Url::parse_with_params(
+                &format!(
+                    "https://api.cloudflare.com/client/v4/zones/{zone_id}/dns_records"
+                ),
+                &[
+                    ("name", name.as_str()),
+                    ("type", "A,AAAA"),
+                    ("per_page", "10"),
+                    ("page", &page.to_string()),
+                ],
+            )
+            .map_err(|e| Error::Api(format!("url: {e}")))?;
             let resp: CfResponse<DnsRecord> = self
                 .client
-                .get(format!(
-                    "https://api.cloudflare.com/client/v4/zones/{zone_id}/dns_records"
-                ))
-                .query(&[
-                    ("name", &name),
-                    ("type", &"A,AAAA".to_string()),
-                    ("per_page", &"10".to_string()),
-                    ("page", &page.to_string()),
-                ])
+                .get(url)
                 .header("Authorization", format!("Bearer {}", self.api_token))
                 .send()
                 .await?
@@ -201,17 +210,21 @@ impl CloudflareSeeder {
             let mut page = 0usize;
             loop {
                 page += 1;
+                let url = Url::parse_with_params(
+                    &format!(
+                        "https://api.cloudflare.com/client/v4/zones/{zone_id}/dns_records"
+                    ),
+                    &[
+                        ("name", name.as_str()),
+                        ("type", "A,AAAA"),
+                        ("per_page", "10"),
+                        ("page", &page.to_string()),
+                    ],
+                )
+                .map_err(|e| Error::Api(format!("url: {e}")))?;
                 let resp: CfResponse<DnsRecord> = self
                     .client
-                    .get(format!(
-                        "https://api.cloudflare.com/client/v4/zones/{zone_id}/dns_records"
-                    ))
-                    .query(&[
-                        ("name", &name),
-                        ("type", &"A,AAAA".to_string()),
-                        ("per_page", &"10".to_string()),
-                        ("page", &page.to_string()),
-                    ])
+                    .get(url)
                     .header("Authorization", format!("Bearer {}", self.api_token))
                     .send()
                     .await?
