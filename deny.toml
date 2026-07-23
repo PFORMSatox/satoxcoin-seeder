@@ -7,6 +7,9 @@ allow = [
     "Apache-2.0",
     "BSD-3-Clause",
     "Unicode-3.0",
+    "ISC",
+    "CDLA-Permissive-2.0",
+    "MIT-0",
 ]
 
 [bans]
@@ -16,7 +19,7 @@ highlight = "all"
 skip = [
     # tree-wide transitive duplicates we can't resolve
     { crate = "core-foundation", reason = "transitive via reqwest (native-tls vs macOS)" },
-    { crate = "getrandom", reason = "transitive via rand 0.8 vs tempfile" },
+    { crate = "cpufeatures", reason = "0.2 via sha2 0.10, 0.3 via chacha20" },
     { crate = "syn", reason = "syn 2.x and 3.x both transitive deps" },
 ]
 skip-tree = []
