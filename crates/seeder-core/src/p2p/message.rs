@@ -157,6 +157,7 @@ impl Address {
     }
 }
 
+#[allow(clippy::too_many_arguments)]
 pub fn serialize_version_payload(
     proto_version: u32,
     services: u64,
@@ -171,7 +172,7 @@ pub fn serialize_version_payload(
     let mut payload = Vec::new();
     payload.extend_from_slice(&proto_version.to_le_bytes());
     payload.extend_from_slice(&services.to_le_bytes());
-    payload.extend_from_slice(&(timestamp as i64).to_le_bytes());
+    payload.extend_from_slice(&timestamp.to_le_bytes());
     payload.extend_from_slice(&addr_recv.serialize());
     payload.extend_from_slice(&addr_from.serialize());
     payload.extend_from_slice(&nonce.to_le_bytes());

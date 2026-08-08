@@ -37,7 +37,7 @@ fn parse_toml_int<T: std::str::FromStr>(table: &toml::Table, key: &str) -> Resul
 }
 
 impl Config {
-    pub fn from_str(input: &str) -> Result<Self, String> {
+    pub fn parse(input: &str) -> Result<Self, String> {
         let table = toml::from_str(input).map_err(|e| format!("parse error: {e}"))?;
         Self::from_table(&table)
     }
@@ -54,12 +54,12 @@ impl Config {
             },
             pch_message_start: {
                 let mut start = [0u8; 4];
-                for i in 0..4 {
+                for (i, slot) in start.iter_mut().enumerate() {
                     let key = format!("pchMessageStart_{i}");
                     let raw = get_str_from_table(table, &key)
                         .ok_or_else(|| format!("missing config key: {key}"))?;
                     let trimmed = raw.trim_matches('"');
-                    start[i] = if let Some(hex) = trimmed.strip_prefix("0x").or_else(|| trimmed.strip_prefix("0X")) {
+                    *slot = if let Some(hex) = trimmed.strip_prefix("0x").or_else(|| trimmed.strip_prefix("0X")) {
                         u8::from_str_radix(hex, 16).map_err(|_| format!("invalid hex: {trimmed}"))?
                     } else {
                         trimmed.parse::<u8>().map_err(|_| format!("invalid byte: {trimmed}"))?
@@ -177,8 +177,8 @@ pub mod toml {
                     Value::Boolean(false)
                 } else {
                     let clean = value_part
-                        .split("//").next().unwrap_or(&value_part)
-                        .split('#').next().unwrap_or(&value_part)
+                        .split("//").next().unwrap_or(value_part)
+                        .split('#').next().unwrap_or(value_part)
                         .trim();
                     Value::String(clean.to_string())
                 };
@@ -256,7 +256,7 @@ pchMessageStart_3 = "0x65"
 wallet_port = "60777"
 block_count = "0"
 "#;
-        let cfg = Config::from_str(raw).unwrap();
+        let cfg = Config::parse(raw).unwrap();
         assert_eq!(cfg.protocol_version, 70028);
         assert_eq!(cfg.init_proto_version, 209);
         assert_eq!(cfg.min_peer_proto_version, 70025);
@@ -280,7 +280,7 @@ block_count = "0"
 seed_1 = "xnode1.satoverse.io"
 seed_2 = "xnode2.satoverse.io"
 "#;
-        let cfg = Config::from_str(raw).unwrap();
+        let cfg = Config::parse(raw).unwrap();
         assert_eq!(cfg.seeds.len(), 2);
         assert_eq!(cfg.seeds[0], "xnode1.satoverse.io");
         assert_eq!(cfg.seeds[1], "xnode2.satoverse.io");
@@ -289,6 +289,6 @@ seed_2 = "xnode2.satoverse.io"
     #[test]
     fn test_config_missing_required() {
         let raw = "wallet_port = \"60777\"\n";
-        assert!(Config::from_str(raw).is_err());
+        assert!(Config::parse(raw).is_err());
     }
 }

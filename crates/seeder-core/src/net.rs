@@ -177,7 +177,7 @@ impl std::fmt::Display for NetAddr {
 
 impl PartialOrd for NetAddr {
     fn partial_cmp(&self, other: &Self) -> Option<Ordering> {
-        Some(self.ip.cmp(&other.ip))
+        Some(self.cmp(other))
     }
 }
 
@@ -234,7 +234,7 @@ impl Service {
 
 impl PartialOrd for Service {
     fn partial_cmp(&self, other: &Self) -> Option<Ordering> {
-        Some(self.addr.cmp(&other.addr).then(self.port.cmp(&other.port)))
+        Some(self.cmp(other))
     }
 }
 
@@ -277,6 +277,24 @@ pub fn split_host_port(input: &str) -> (String, Option<u16>) {
         }
     }
     (input.to_string(), None)
+}
+
+pub fn lookup_host(host: &str) -> Result<Vec<NetAddr>, String> {
+    if let Ok(addr) = NetAddr::from_str(host) {
+        return Ok(vec![addr]);
+    }
+    let ips = tokio::task::block_in_place(|| {
+        std::net::ToSocketAddrs::to_socket_addrs(host)
+            .map_err(|e| format!("dns lookup failed: {e}"))
+    })?;
+    let mut result = Vec::new();
+    for addr in ips {
+        match addr {
+            SocketAddr::V4(v4) => result.push(NetAddr::from_ipv4(*v4.ip())),
+            SocketAddr::V6(v6) => result.push(NetAddr::from_ipv6(*v6.ip())),
+        }
+    }
+    Ok(result)
 }
 
 #[cfg(test)]
@@ -377,22 +395,4 @@ mod tests {
         let b = NetAddr::from_str("2.2.2.2").unwrap();
         assert!(a < b);
     }
-}
-
-pub fn lookup_host(host: &str) -> Result<Vec<NetAddr>, String> {
-    if let Ok(addr) = NetAddr::from_str(host) {
-        return Ok(vec![addr]);
-    }
-    let ips = tokio::task::block_in_place(|| {
-        std::net::ToSocketAddrs::to_socket_addrs(host)
-            .map_err(|e| format!("dns lookup failed: {e}"))
-    })?;
-    let mut result = Vec::new();
-    for addr in ips {
-        match addr {
-            SocketAddr::V4(v4) => result.push(NetAddr::from_ipv4(*v4.ip())),
-            SocketAddr::V6(v6) => result.push(NetAddr::from_ipv6(*v6.ip())),
-        }
-    }
-    Ok(result)
 }

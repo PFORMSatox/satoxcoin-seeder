@@ -146,6 +146,7 @@ fn write_record_header(
     Ok(())
 }
 
+#[allow(clippy::too_many_arguments)]
 fn write_soa(
     buf: &mut Vec<u8>,
     name: &str,
@@ -339,19 +340,19 @@ pub async fn run(opt: Arc<DnsOpt>) -> Result<(), String> {
         // Calculate max_auth_size
         let _max_auth_size = {
             let mut tmp = Vec::new();
-            if let Ok(_) = write_ns(&mut tmp, "", cls, 0, &opt.ns) {}
+            let _ = write_ns(&mut tmp, "", cls, 0, &opt.ns);
             20 // rough estimate for SOA
         };
 
         // NS records
         if (typ == 2 || typ == 255) && (cls == 1 || cls == 255) {
             let mut tmp = Vec::new();
-            if write_ns(&mut tmp, "", cls, opt.nsttl, &opt.ns).is_ok() {
-                if outpos + tmp.len() < outend {
-                    outbuf[outpos..outpos + tmp.len()].copy_from_slice(&tmp);
-                    outpos += tmp.len();
-                    answer_count += 1;
-                }
+            if write_ns(&mut tmp, "", cls, opt.nsttl, &opt.ns).is_ok()
+                && outpos + tmp.len() < outend
+            {
+                outbuf[outpos..outpos + tmp.len()].copy_from_slice(&tmp);
+                outpos += tmp.len();
+                answer_count += 1;
             }
         }
 
@@ -362,12 +363,12 @@ pub async fn run(opt: Arc<DnsOpt>) -> Result<(), String> {
                 .unwrap_or_default()
                 .as_secs() as u32;
             let mut tmp = Vec::new();
-            if write_soa(&mut tmp, "", cls, opt.nsttl, &opt.ns, &opt.mbox, serial, 604800, 86400, 2592000, 604800).is_ok() {
-                if outpos + tmp.len() < outend {
-                    outbuf[outpos..outpos + tmp.len()].copy_from_slice(&tmp);
-                    outpos += tmp.len();
-                    answer_count += 1;
-                }
+            if write_soa(&mut tmp, "", cls, opt.nsttl, &opt.ns, &opt.mbox, serial, 604800, 86400, 2592000, 604800).is_ok()
+                && outpos + tmp.len() < outend
+            {
+                outbuf[outpos..outpos + tmp.len()].copy_from_slice(&tmp);
+                outpos += tmp.len();
+                answer_count += 1;
             }
         }
 
@@ -399,12 +400,12 @@ pub async fn run(opt: Arc<DnsOpt>) -> Result<(), String> {
         // Authority section
         if answer_count > 0 {
             let mut tmp = Vec::new();
-            if write_ns(&mut tmp, "", cls, opt.nsttl, &opt.ns).is_ok() {
-                if outpos + tmp.len() < outend {
-                    outbuf[outpos..outpos + tmp.len()].copy_from_slice(&tmp);
-                    outpos += tmp.len();
-                    auth_count += 1;
-                }
+            if write_ns(&mut tmp, "", cls, opt.nsttl, &opt.ns).is_ok()
+                && outpos + tmp.len() < outend
+            {
+                outbuf[outpos..outpos + tmp.len()].copy_from_slice(&tmp);
+                outpos += tmp.len();
+                auth_count += 1;
             }
         } else if !opt.mbox.is_empty() {
             let serial = std::time::SystemTime::now()
@@ -412,12 +413,12 @@ pub async fn run(opt: Arc<DnsOpt>) -> Result<(), String> {
                 .unwrap_or_default()
                 .as_secs() as u32;
             let mut tmp = Vec::new();
-            if write_soa(&mut tmp, "", cls, opt.nsttl, &opt.ns, &opt.mbox, serial, 604800, 86400, 2592000, 604800).is_ok() {
-                if outpos + tmp.len() < outend {
-                    outbuf[outpos..outpos + tmp.len()].copy_from_slice(&tmp);
-                    outpos += tmp.len();
-                    auth_count += 1;
-                }
+            if write_soa(&mut tmp, "", cls, opt.nsttl, &opt.ns, &opt.mbox, serial, 604800, 86400, 2592000, 604800).is_ok()
+                && outpos + tmp.len() < outend
+            {
+                outbuf[outpos..outpos + tmp.len()].copy_from_slice(&tmp);
+                outpos += tmp.len();
+                auth_count += 1;
             }
         }
 

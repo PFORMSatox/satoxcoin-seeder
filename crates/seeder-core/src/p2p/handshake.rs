@@ -148,7 +148,7 @@ pub async fn test_node(
             let mut found = None;
             let buf_slice: &[u8] = read_buf.make_contiguous();
             for i in 0..buf_slice.len().saturating_sub(23) {
-                if &buf_slice[i..i + 4] == &magic {
+                if buf_slice[i..i + 4] == magic {
                     found = Some(i);
                     break;
                 }

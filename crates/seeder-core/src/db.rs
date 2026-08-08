@@ -9,7 +9,7 @@ use crate::NODE_NETWORK;
 
 const MIN_RETRY: i64 = 1000;
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Default, Serialize, Deserialize)]
 pub struct AddrStat {
     weight: f64,
     count: f64,
@@ -18,11 +18,7 @@ pub struct AddrStat {
 
 impl AddrStat {
     pub fn new() -> Self {
-        AddrStat {
-            weight: 0.0,
-            count: 0.0,
-            reliability: 0.0,
-        }
+        Self::default()
     }
 
     pub fn update(&mut self, good: bool, age: f64, tau: f64) {
@@ -148,7 +144,7 @@ impl AddrInfo {
             return 7 * 86400;
         }
         if self.stat_1d.reliability - self.stat_1d.weight + 1.0 < 0.05 && self.stat_1d.count > 8.0 {
-            return 1 * 86400;
+            return 86400;
         }
         0
     }

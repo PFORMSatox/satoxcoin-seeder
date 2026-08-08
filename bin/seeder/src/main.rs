@@ -6,7 +6,7 @@ use std::time::{Duration, SystemTime, UNIX_EPOCH};
 use clap::Parser;
 use tracing_subscriber::EnvFilter;
 
-use dns_server::server::{self, Addr, DnsOpt};
+use dns_server::server::{self, Addr, DnsOpt, IpCallback};
 use seeder_core::config::Config;
 use seeder_core::db::{new_shared_db, SharedDb};
 use seeder_core::explorer::read_block_height;
@@ -167,18 +167,14 @@ async fn main() {
         let port = cli.port;
 
         let dns_cache = dns_ips.clone();
-        let cb: Arc<dyn Fn(&str) -> Vec<Addr> + Send + Sync> = Arc::new(move |_name| {
+        let cb: IpCallback = Arc::new(move |_name| {
             let cache = dns_cache.read().unwrap();
             cache
                 .iter()
                 .filter_map(|ip| {
-                    if let Some(v4) = ip.to_ipv4_addr() {
-                        Some(Addr::v4(v4.octets()))
-                    } else if let Some(v6) = ip.to_ipv6_addr() {
-                        Some(Addr::v6(v6.octets()))
-                    } else {
-                        None
-                    }
+                    ip.to_ipv4_addr()
+                        .map(|v4| Addr::v4(v4.octets()))
+                        .or_else(|| ip.to_ipv6_addr().map(|v6| Addr::v6(v6.octets())))
                 })
                 .collect()
         });
