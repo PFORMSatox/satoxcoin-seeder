@@ -1,0 +1,9 @@
+[workspace]
+members = [
+    "crates/seeder-core",
+    "crates/dns-server",
+    "crates/seeder-publish",
+    "bin/seeder",
+    "bin/dnsseed-publish",
+]
+resolver = "2"
