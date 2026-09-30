@@ -12,7 +12,7 @@ use seeder_core::db::{new_shared_db, SharedDb};
 use seeder_core::explorer::read_block_height;
 use seeder_core::net::{lookup_host, Service};
 use seeder_core::p2p::handshake::test_node;
-use seeder_core::{app_state, init_app_state};
+use seeder_core::{app_state, block_from_explorer, current_block, init_app_state, set_current_block};
 
 #[derive(Parser, Debug)]
 #[command(name = "seeder", version = "0.1.0")]
@@ -102,9 +102,8 @@ async fn main() {
     let explorer_url = cfg.explorer_url.clone();
     let explorer_url2 = cfg.second_explorer_url.clone();
     let requery = cfg.explorer_requery_seconds;
-    let block_count = cfg.block_count;
     tokio::spawn(async move {
-        block_reader_task(explorer_url, explorer_url2, requery, block_count).await;
+        block_reader_task(explorer_url, explorer_url2, requery).await;
     });
 
     // Seeder task: resolve seed hosts periodically
@@ -117,7 +116,7 @@ async fn main() {
                 if seed.is_empty() {
                     continue;
                 }
-                match lookup_host(seed) {
+                match lookup_host(seed, wallet_port) {
                     Ok(ips) => {
                         let mut guard = db_seeder.write().await;
                         for ip in ips {
@@ -289,7 +288,6 @@ async fn block_reader_task(
     url1: Option<String>,
     url2: Option<String>,
     requery_secs: u64,
-    default_height: i32,
 ) {
     let url1 = match url1 {
         Some(u) => u,
@@ -303,8 +301,18 @@ async fn block_reader_task(
             None => None,
         };
 
-        let block = h2.or(h1).unwrap_or(default_height);
-        tracing::info!("current block: {block}");
+        match h2.or(h1) {
+            Some(block) => {
+                set_current_block(block, true);
+                tracing::info!("current block: {block}");
+            }
+            None => {
+                tracing::warn!(
+                    "explorers unreachable, keeping block {}",
+                    current_block()
+                );
+            }
+        }
 
         tokio::time::sleep(Duration::from_secs(requery_secs)).await;
     }
@@ -330,15 +338,14 @@ async fn crawler_task(db: SharedDb) {
         let mut results = Vec::new();
         for res in &ips {
             let get_addr = res.our_last_success + 86400 < now;
-            let state = app_state();
-            let handshake = test_node(&res.service, state.current_block, get_addr).await;
+            let tip = current_block();
+            let handshake = test_node(&res.service, tip, get_addr).await;
 
             let is_good = handshake.ban == 0 && handshake.client_version > 0;
-            let in_sync = if state.block_from_explorer {
-                handshake.starting_height >= state.current_block - 5
-                    && handshake.starting_height <= state.current_block + 5
+            let in_sync = if block_from_explorer() {
+                handshake.starting_height >= tip - 5 && handshake.starting_height <= tip + 5
             } else {
-                handshake.starting_height >= state.current_block
+                handshake.starting_height >= tip
             };
 
             results.push(seeder_core::db::ServiceResult {

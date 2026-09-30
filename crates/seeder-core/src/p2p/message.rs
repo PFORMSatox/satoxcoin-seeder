@@ -1,6 +1,6 @@
 use crate::net::NetAddr;
 use crate::serialize::{sha256d, write_varstr};
-use crate::app_state;
+use crate::{app_state, init_proto_version};
 
 pub const COMMAND_SIZE: usize = 12;
 pub const MAX_SIZE: u32 = 0x02000000;
@@ -94,12 +94,20 @@ pub struct Address {
 }
 
 impl Address {
-    pub fn serialize(&self) -> Vec<u8> {
+    /// Serialize an address for the wire, mirroring the C++ seeder's
+    /// CAddress logic (protocol.h): the timestamp is included only when
+    /// the stream version differs from the init version (or, when
+    /// caddr_time_version is set, when the stream version >= it).
+    /// Version-message addresses are written with the init version, so
+    /// they never carry the 4-byte time field (26 bytes total).
+    pub fn serialize(&self, stream_version: u32) -> Vec<u8> {
         let state = app_state();
         let mut buf = Vec::new();
-        let include_time = (state.caddr_time_version == 0
-            && state.init_proto_version != state.protocol_version)
-            || state.protocol_version >= state.caddr_time_version;
+        let include_time = if state.caddr_time_version == 0 {
+            stream_version != state.init_proto_version
+        } else {
+            stream_version >= state.caddr_time_version
+        };
         if include_time {
             buf.extend_from_slice(&self.time.to_le_bytes());
         }
@@ -173,8 +181,11 @@ pub fn serialize_version_payload(
     payload.extend_from_slice(&proto_version.to_le_bytes());
     payload.extend_from_slice(&services.to_le_bytes());
     payload.extend_from_slice(&timestamp.to_le_bytes());
-    payload.extend_from_slice(&addr_recv.serialize());
-    payload.extend_from_slice(&addr_from.serialize());
+    // Version-message addresses use the init-proto stream version, which
+    // excludes the timestamp field (mirrors C++ vSend.SetVersion(init)).
+    let addr_version = init_proto_version();
+    payload.extend_from_slice(&addr_recv.serialize(addr_version));
+    payload.extend_from_slice(&addr_from.serialize(addr_version));
     payload.extend_from_slice(&nonce.to_le_bytes());
     write_varstr(&mut payload, sub_version);
     payload.extend_from_slice(&start_height.to_le_bytes());
@@ -209,6 +220,7 @@ mod tests {
                 cf_domain_prefix: None,
                 cf_api_token: None,
                 cf_seed_dump: None,
+                cf_own_ip: None,
                 cf_max_seeds: None,
             };
             init_app_state(&cfg);
@@ -287,9 +299,11 @@ mod tests {
             ]),
             port: 60777,
         };
-        let bytes = addr.serialize();
-        // 4 time + 8 services + 16 ip + 2 port = 30
-        assert!(bytes.len() == 26 || bytes.len() == 30);
+        // Version-message context (stream version == init 209): no time field.
+        // 8 services + 16 ip + 2 port = 26
+        assert_eq!(addr.serialize(209).len(), 26);
+        // Addr-message context (stream version 70028): 4 time + 8 + 16 + 2 = 30
+        assert_eq!(addr.serialize(70028).len(), 30);
     }
 
     #[test]
@@ -303,7 +317,7 @@ mod tests {
             ]),
             port: 8333,
         };
-        let bytes = addr.serialize();
+        let bytes = addr.serialize(70028);
         let mut pos = 0;
         let decoded = Address::deserialize(&bytes, &mut pos, 70028, 0).unwrap();
         assert_eq!(decoded.time, 1234567);
@@ -327,5 +341,37 @@ mod tests {
         let payload = serialize_version_payload(70028, 1, 1234567, &recv, &from, 42, "/satoxcoin-seeder:0.1/", 0, 1);
         // Should be 4+8+8 + addr_len + addr_len + 8 + varstr + 4 + 1
         assert!(payload.len() > 80);
+    }
+
+    #[test]
+    fn test_version_payload_matches_cpp_wire_layout() {
+        setup();
+        let recv = Address {
+            time: 0,
+            services: 1,
+            addr: NetAddr::from_bytes(&[
+                0,0,0,0,0,0,0,0,0,0,0xff,0xff, 8,8,8,8
+            ]),
+            port: 60777,
+        };
+        let from = Address {
+            time: 0,
+            services: 0,
+            addr: NetAddr::from_bytes(&[0; 16]),
+            port: 0,
+        };
+        let subver = "/satoxcoin-seeder:0.1.0/";
+        let payload = serialize_version_payload(70028, 0, 1234567, &recv, &from, 42, subver, 1935151, 0);
+        // C++ bitcoin-seeder layout: version(4) + services(8) + time(8)
+        // + addr_recv(26, NO time) + addr_from(26, NO time) + nonce(8)
+        // + varstr + height(4) + relay(1)
+        let expected = 4 + 8 + 8 + 26 + 26 + 8 + 1 + subver.len() + 4 + 1;
+        assert_eq!(payload.len(), expected);
+        // addr_recv starts at offset 20: services(u64 LE), then 16B IP, then port(BE)
+        let mut svc = [0u8; 8];
+        svc.copy_from_slice(&payload[20..28]);
+        assert_eq!(u64::from_le_bytes(svc), 1);
+        assert_eq!(&payload[28..44], &[0,0,0,0,0,0,0,0,0,0,0xff,0xff,8,8,8,8]);
+        assert_eq!(u16::from_be_bytes([payload[44], payload[45]]), 60777);
     }
 }

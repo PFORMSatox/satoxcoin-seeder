@@ -17,6 +17,7 @@ pub struct Config {
     pub cf_domain_prefix: Option<String>,
     pub cf_api_token: Option<String>,
     pub cf_seed_dump: Option<String>,
+    pub cf_own_ip: Option<String>,
     pub cf_max_seeds: Option<usize>,
 }
 
@@ -105,6 +106,9 @@ impl Config {
             cf_seed_dump: get_str_from_table(table, "cf_seed_dump")
                 .filter(|s| !s.trim_matches('"').is_empty())
                 .map(|s| s.trim_matches('"').to_string()),
+            cf_own_ip: get_str_from_table(table, "cf_own_ip")
+                .filter(|s| !s.trim_matches('"').is_empty())
+                .map(|s| s.trim_matches('"').to_string()),
             cf_max_seeds: Some(25),
         })
     }
@@ -161,9 +165,10 @@ pub mod toml {
                     let end = value_part
                         .rfind('"')
                         .ok_or_else(|| format!("unclosed quote in: {trimmed}"))?;
+                    // Quoted value is complete: anything after the closing
+                    // quote is a comment. Never strip `//` or `#` inside
+                    // the quotes — URLs contain them.
                     let inner = &value_part[1..end];
-                    let inner = inner.split("//").next().unwrap_or(inner);
-                    let inner = inner.split('#').next().unwrap_or(inner);
                     Value::String(inner.trim().to_string())
                 } else if value_part.starts_with("0x") || value_part.starts_with("0X") {
                     Value::String(value_part.to_string())
@@ -216,6 +221,25 @@ mod tests {
     fn test_toml_parse_comment() {
         let table = toml::from_str("key = \"val\" # inline comment\n").unwrap();
         assert_eq!(table["key"].as_str(), Some("val"));
+    }
+
+    #[test]
+    fn test_toml_quoted_url_preserved() {
+        let table = toml::from_str(
+            "explorer_url = \"https://xplore.satoverse.io/api/getblockcount\"\n",
+        )
+        .unwrap();
+        assert_eq!(
+            table["explorer_url"].as_str(),
+            Some("https://xplore.satoverse.io/api/getblockcount")
+        );
+    }
+
+    #[test]
+    fn test_toml_quoted_value_with_trailing_comment() {
+        let table =
+            toml::from_str("wallet_port = \"60777\"\t// Your coins main port #\n").unwrap();
+        assert_eq!(table["wallet_port"].as_str(), Some("60777"));
     }
 
     #[test]
@@ -290,5 +314,40 @@ seed_2 = "xnode2.satoverse.io"
     fn test_config_missing_required() {
         let raw = "wallet_port = \"60777\"\n";
         assert!(Config::parse(raw).is_err());
+    }
+
+    #[test]
+    fn test_config_own_ip() {
+        let raw = r#"
+protocol_version = "70028"
+init_proto_version = "209"
+min_peer_proto_version = "70025"
+pchMessageStart_0 = "0x63"
+pchMessageStart_1 = "0x56"
+pchMessageStart_2 = "0x65"
+pchMessageStart_3 = "0x65"
+wallet_port = "60777"
+block_count = "0"
+cf_own_ip = "65.108.219.177"
+"#;
+        let cfg = Config::parse(raw).unwrap();
+        assert_eq!(cfg.cf_own_ip.as_deref(), Some("65.108.219.177"));
+    }
+
+    #[test]
+    fn test_config_own_ip_absent_is_none() {
+        let raw = r#"
+protocol_version = "70028"
+init_proto_version = "209"
+min_peer_proto_version = "70025"
+pchMessageStart_0 = "0x63"
+pchMessageStart_1 = "0x56"
+pchMessageStart_2 = "0x65"
+pchMessageStart_3 = "0x65"
+wallet_port = "60777"
+block_count = "0"
+"#;
+        let cfg = Config::parse(raw).unwrap();
+        assert_eq!(cfg.cf_own_ip, None);
     }
 }

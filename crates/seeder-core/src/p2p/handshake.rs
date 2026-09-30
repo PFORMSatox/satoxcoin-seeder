@@ -120,6 +120,7 @@ pub async fn test_node(
     let mut read_buf = VecDeque::new();
     let mut tmp = [0u8; 4096];
     let mut remote_version = 0i32;
+    let mut remote_services = 0u64;
     let mut remote_subver = String::new();
     let mut remote_height = 0i32;
     let mut verack_received = false;
@@ -213,6 +214,11 @@ pub async fn test_node(
                     buf.copy_from_slice(&payload[..4]);
                     remote_version = i32::from_le_bytes(buf);
                     pos = 4;
+                    if payload.len() >= pos + 8 {
+                        let mut svc = [0u8; 8];
+                        svc.copy_from_slice(&payload[pos..pos + 8]);
+                        remote_services = u64::from_le_bytes(svc);
+                    }
                     pos += 8;
                     pos += 8;
                     pos += 26;
@@ -275,7 +281,7 @@ pub async fn test_node(
         client_version: remote_version,
         client_sub_version: remote_subver,
         starting_height: remote_height,
-        services: 0,
+        services: remote_services,
         addresses,
         ban,
     }

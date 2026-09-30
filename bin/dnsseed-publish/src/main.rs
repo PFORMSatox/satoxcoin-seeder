@@ -6,6 +6,7 @@ use tracing_subscriber::EnvFilter;
 use seeder_core::config::Config;
 use seeder_publish::api::CloudflareSeeder;
 use seeder_publish::parser::read_seed_dump;
+use seeder_publish::reconcile::reconcile;
 
 const MAX_SEEDS: usize = 25;
 
@@ -30,6 +31,9 @@ struct Cli {
 
     #[arg(long, help = "Cloudflare prefix (overrides config)")]
     prefix: Option<String>,
+
+    #[arg(long, help = "Own IP to always publish (overrides config)")]
+    own_ip: Option<String>,
 
     #[arg(long, help = "Wallet port (overrides config)")]
     port: Option<u16>,
@@ -75,6 +79,7 @@ async fn main() {
         .unwrap_or_else(|| "dnsseed.dump".to_string());
     let wallet_port = cli.port.unwrap_or(cfg.wallet_port);
     let max_seeds = cli.max_seeds.min(MAX_SEEDS);
+    let own_ip = cli.own_ip.or(cfg.cf_own_ip).unwrap_or_default();
 
     if api_token.is_empty() || domain.is_empty() || prefix.is_empty() {
         eprintln!("error: cf_api_token, cf_domain, and cf_domain_prefix must be set in config or CLI");
@@ -110,50 +115,29 @@ async fn main() {
         }
     };
 
-    let mut current_good_seeds = current_seeds;
+    let plan = reconcile(
+        &current_seeds,
+        &seed_candidates,
+        if own_ip.is_empty() {
+            None
+        } else {
+            Some(own_ip.as_str())
+        },
+        max_seeds,
+    );
 
-    // Remove stale seeds
-    let stale: Vec<String> = current_good_seeds
-        .iter()
-        .filter(|s| !seed_candidates.contains(s))
-        .cloned()
-        .collect();
-    if !stale.is_empty() {
-        tracing::info!("Removing {} stale seeds: {:?}", stale.len(), stale);
-        if let Err(e) = cf.delete_seeds(&stale).await {
-            tracing::warn!("failed to delete stale seeds: {e}");
-        }
-        current_good_seeds.retain(|s| !stale.contains(s));
-    }
-
-    // Prune if over limit
-    if current_good_seeds.len() >= max_seeds {
-        let extra: Vec<String> = current_good_seeds
-            .iter()
-            .filter(|s| !seed_candidates.contains(s))
-            .cloned()
-            .collect();
-        if !extra.is_empty() {
-            tracing::info!("Pruning {} extra seeds", extra.len());
-            if let Err(e) = cf.delete_seeds(&extra).await {
-                tracing::warn!("failed to prune seeds: {e}");
-            }
-            current_good_seeds.retain(|s| !extra.contains(s));
+    if !plan.to_delete.is_empty() {
+        tracing::info!(
+            "Removing {} stale/overflow seeds: {:?}",
+            plan.to_delete.len(),
+            plan.to_delete
+        );
+        if let Err(e) = cf.delete_seeds(&plan.to_delete).await {
+            tracing::warn!("failed to delete seeds: {e}");
         }
     }
 
-    // Add new seeds
-    let shortfall = max_seeds.saturating_sub(current_good_seeds.len());
-    let mut to_add = Vec::new();
-    for seed in &seed_candidates {
-        if to_add.len() >= shortfall {
-            break;
-        }
-        if !current_good_seeds.contains(seed) {
-            to_add.push(seed.clone());
-        }
-    }
-
+    let to_add = plan.to_add;
     if !to_add.is_empty() {
         tracing::info!("Adding {} new seeds: {:?}", to_add.len(), to_add);
 

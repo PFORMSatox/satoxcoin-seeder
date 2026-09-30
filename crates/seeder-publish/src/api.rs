@@ -148,6 +148,9 @@ impl CloudflareSeeder {
                 .await?
                 .json()
                 .await?;
+            if !resp.success {
+                return Err(Error::Api(format!("cloudflare error: {:?}", resp.errors)));
+            }
 
             all_records.extend(resp.result);
             let total = resp.result_info.map(|r| r.total_pages).unwrap_or(0);

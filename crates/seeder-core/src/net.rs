@@ -279,12 +279,14 @@ pub fn split_host_port(input: &str) -> (String, Option<u16>) {
     (input.to_string(), None)
 }
 
-pub fn lookup_host(host: &str) -> Result<Vec<NetAddr>, String> {
+pub fn lookup_host(host: &str, port: u16) -> Result<Vec<NetAddr>, String> {
     if let Ok(addr) = NetAddr::from_str(host) {
         return Ok(vec![addr]);
     }
+    // Bare DNS names carry no port; resolve with the given port (it is
+    // discarded — callers apply the wallet port themselves).
     let ips = tokio::task::block_in_place(|| {
-        std::net::ToSocketAddrs::to_socket_addrs(host)
+        std::net::ToSocketAddrs::to_socket_addrs(&(host, port))
             .map_err(|e| format!("dns lookup failed: {e}"))
     })?;
     let mut result = Vec::new();
@@ -394,5 +396,13 @@ mod tests {
         let a = NetAddr::from_str("1.1.1.1").unwrap();
         let b = NetAddr::from_str("2.2.2.2").unwrap();
         assert!(a < b);
+    }
+
+    #[tokio::test(flavor = "multi_thread")]
+    async fn test_lookup_host_bare_dns_name() {
+        // Production seeds are bare DNS names (no port), e.g. xnode1.satoverse.io.
+        // localhost resolves via hosts file without network access.
+        let ips = lookup_host("localhost", 60777).unwrap();
+        assert!(!ips.is_empty());
     }
 }
